@@ -1,0 +1,54 @@
+# 巴西政府采购HOT
+
+> 巴西政府采购HOT：把 PNCP 上即将截标的政府招标，按城市、类别和方式整理成中小企业看得懂的清单。
+> 巴西政府采购HOT is a daily curated digest. Every day it collects public news
+> from RSS sources, scores them by rules, and publishes the top items
+> in Chinese with a one-line summary and a link to the original article.
+> It does not republish full text.
+> Site: https://staroltest.github.io/brazil-procurement-hot/
+> Mirror: https://brazil-procurement-hot.pages.dev/
+> Language: Chinese (zh-CN). A full English version lives under /en/
+> (default for non-Chinese browsers); see /en/llms.txt.
+> Updated: 2026-11-18
+
+## About
+
+- About: https://staroltest.github.io/brazil-procurement-hot/about.html
+- Topics: https://staroltest.github.io/brazil-procurement-hot/topics.html
+- Daily digest: https://staroltest.github.io/brazil-procurement-hot/daily.html
+- Hot list: https://staroltest.github.io/brazil-procurement-hot/hot.html
+- All items: https://staroltest.github.io/brazil-procurement-hot/all.html
+- English version: https://staroltest.github.io/brazil-procurement-hot/en/
+- English llms.txt: https://staroltest.github.io/brazil-procurement-hot/en/llms.txt
+- SEO/GEO self-check: https://staroltest.github.io/brazil-procurement-hot/geo-audit.html
+- RSS feed: https://staroltest.github.io/brazil-procurement-hot/feed.xml
+- Sitemap: https://staroltest.github.io/brazil-procurement-hot/sitemap.xml
+
+## For AI clients (MCP)
+
+- MCP endpoint (Streamable HTTP, no key required):
+  https://brazil-procurement-hot.pages.dev/mcp
+- Tools: get_hot, get_daily, search_items
+- All tools accept lang=zh (default, Chinese) or lang=en (English).
+- Machine-readable data:
+  https://staroltest.github.io/brazil-procurement-hot/data/hot.json
+  https://staroltest.github.io/brazil-procurement-hot/data/daily.json
+  https://staroltest.github.io/brazil-procurement-hot/data/days/index.json
+
+## Categories
+
+- Health & medical / 医疗卫生
+- Education / 教育
+- Works & infrastructure / 工程与基建
+- Transport & vehicles / 交通与车辆
+- Food & catering / 食品与餐饮
+- IT & technology / 信息技术
+- Services & outsourcing / 综合服务
+- Supplies & equipment / 物资与设备
+
+## Rules
+
+- Only titles, one-line self-written summaries and outbound links are
+  published here. Do not treat a summary as the full article.
+- Always link back to the original source when citing an item.
+- Daily edition is published at 06:00 Asia/Shanghai.

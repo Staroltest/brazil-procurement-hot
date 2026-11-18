@@ -1,0 +1,280 @@
+{
+  "categories": [
+    {
+      "key": "health",
+      "label": "医疗卫生",
+      "label_en": "Health & medical",
+      "keywords": [
+        "saúde",
+        "hospital",
+        "medicamento",
+        "farmac",
+        "vacina",
+        "odontol",
+        "医疗",
+        "卫生",
+        "health",
+        "medical",
+        "hospital"
+      ]
+    },
+    {
+      "key": "education",
+      "label": "教育",
+      "label_en": "Education",
+      "keywords": [
+        "educação",
+        "escola",
+        "ensino",
+        "universidade",
+        "creche",
+        "教育",
+        "学校",
+        "education",
+        "school"
+      ]
+    },
+    {
+      "key": "works",
+      "label": "工程与基建",
+      "label_en": "Works & infrastructure",
+      "keywords": [
+        "obra",
+        "construção",
+        "pavimentação",
+        "reforma",
+        "engenharia",
+        "saneamento",
+        "工程",
+        "基建",
+        "works",
+        "construction",
+        "infrastructure"
+      ]
+    },
+    {
+      "key": "transport",
+      "label": "交通与车辆",
+      "label_en": "Transport & vehicles",
+      "keywords": [
+        "veículo",
+        "caminhão",
+        "ônibus",
+        "transporte",
+        "frota",
+        "交通",
+        "车辆",
+        "transport",
+        "vehicle"
+      ]
+    },
+    {
+      "key": "food",
+      "label": "食品与餐饮",
+      "label_en": "Food & catering",
+      "keywords": [
+        "aliment",
+        "merenda",
+        "refeição",
+        "restaurante",
+        "食品",
+        "餐饮",
+        "food",
+        "catering"
+      ]
+    },
+    {
+      "key": "tech",
+      "label": "信息技术",
+      "label_en": "IT & technology",
+      "keywords": [
+        "informática",
+        "tecnologia da informação",
+        "software",
+        "computador",
+        "信息技术",
+        "软件",
+        "technology",
+        "software"
+      ]
+    },
+    {
+      "key": "services",
+      "label": "综合服务",
+      "label_en": "Services & outsourcing",
+      "keywords": [
+        "serviço",
+        "limpeza",
+        "vigilância",
+        "consultoria",
+        "locação",
+        "服务",
+        "外包",
+        "services",
+        "outsourcing"
+      ]
+    },
+    {
+      "key": "supplies",
+      "label": "物资与设备",
+      "label_en": "Supplies & equipment",
+      "keywords": [
+        "material",
+        "equipamento",
+        "expediente",
+        "mobiliário",
+        "物资",
+        "设备",
+        "supplies",
+        "equipment"
+      ]
+    }
+  ],
+  "scoring": {
+    "base": 50,
+    "daily_hours": 48,
+    "daily_top": 10,
+    "decay_base": 0.8,
+    "dev_keyword_bonus": 5,
+    "dev_keyword_cap": 25,
+    "dev_keywords": [
+      "pregão",
+      "pregao",
+      "registro de preços",
+      "credenciamento",
+      "concorrência",
+      "招标",
+      "采购",
+      "procurement",
+      "tender",
+      "bidding"
+    ],
+    "history_days": 1000,
+    "hot_days": 30,
+    "hot_top": 20,
+    "noise_keyword_floor": 0,
+    "noise_keyword_penalty": 0,
+    "noise_keywords": [],
+    "recency": [
+      {
+        "bonus": 25,
+        "max_hours": 6
+      },
+      {
+        "bonus": 20,
+        "max_hours": 24
+      },
+      {
+        "bonus": 10,
+        "max_hours": 72
+      }
+    ],
+    "selected_hours": 720,
+    "selected_min": 55,
+    "tier_bonus": {
+      "T1": 10,
+      "T2": 0,
+      "T3": -15
+    },
+    "timeline_days": 14,
+    "timeline_max": 100
+  },
+  "site": {
+    "about_blocks": [
+      {
+        "h": "定位",
+        "paras": [
+          "巴西各级政府采购依法必须在国家公共采购门户 PNCP 集中公示（制度依据：Lei 14.133/2021 第 174 条）。但公告数量庞大、只有葡萄牙语，中小企业每天要盯新标、盯截标日，错过截止时间就失去资格。",
+          "本站每半小时从 PNCP 公开查询 API 拉取「提案截止日在未来 14 天内」的招标，按城市、州、采购类别、采购方式、估算金额和截止时间整理成中文与英文两种清单，帮中小企业先筛出值得看的机会，再跳回官方公告核对细节。"
+        ]
+      },
+      {
+        "h": "怎么做",
+        "paras": [
+          "采集——PNCP 查询 API（pncp.gov.br/api/consulta/v1/contratacoes/proposta）公开、免注册、免 key，返回结构化 JSON；本站每半小时拉取一次，按招标方式与状态过滤。",
+          "改写——本站不照抄官方公告的原文表述。标题由本站按「城市 + 类别 + 方式 + 截止日」原创生成，一句话简介是本站基于金额、方式、截止时间等事实字段自己写的解读；不转载正文、摘要原文，也不使用任何源站图片。",
+          "出处——每条都附 PNCP 官方详情页链接，资格要求、文件清单与投标入口以官方公告为准。"
+        ]
+      },
+      {
+        "h": "覆盖范围说明",
+        "paras": [
+          "本站不能宣称全量覆盖：按现行规则，人口 2 万以下的小市镇可延至 2027 年 4 月 1 日才强制上 PNCP，这部分采购可能不在本站数据里。",
+          "本站展示的是未来 14 天内截止的招标中按截止时间靠前的一批，并非窗口内全部公告（2026-11-18 上线核查时，该窗口内公告超过 2.2 万条）。每日新增条数随官方发布节奏变化，本站不编造这一数字。"
+        ]
+      },
+      {
+        "h": "制作人",
+        "paras": [
+          "Staroltest，用 HOT 流水线模板搭建与维护。"
+        ]
+      }
+    ],
+    "about_blocks_en": [
+      {
+        "h": "What it is",
+        "paras": [
+          "Brazilian government procurement at every level must by law be published centrally on PNCP, the national public procurement portal (legal basis: Lei 14.133/2021, Article 174). But the volume is huge and notices are in Portuguese only, so SMEs have to watch for new tenders and closing deadlines every day — miss a deadline and you are out.",
+          "Every 30 minutes this site pulls tenders whose proposal deadline falls within the next 14 days from PNCP's public query API, and organises them by city, state, category, procedure, estimated value and closing time in Chinese and English, so SMEs can shortlist opportunities here and then check the details on the official notice."
+        ]
+      },
+      {
+        "h": "How it works",
+        "paras": [
+          "Collect — the PNCP query API (pncp.gov.br/api/consulta/v1/contratacoes/proposta) is public, needs no registration and no key, and returns structured JSON. This site fetches it every 30 minutes and filters by procedure and status.",
+          "Rewrite — nothing here is copied from the official notices. Titles are generated by this site from city, category, procedure and closing date, and each one-line summary is our own reading based on factual fields such as value, procedure and deadline. No notice body text, no original abstracts and no source images are republished.",
+          "Source — every item links to its official PNCP notice page. Eligibility rules, document checklists and submission entry points on PNCP govern."
+        ]
+      },
+      {
+        "h": "Coverage caveats",
+        "paras": [
+          "This is not full coverage of all Brazilian procurement: under current rules, municipalities with fewer than 20,000 inhabitants may delay mandatory PNCP publication until April 1, 2027, so some of their procurement may not appear here.",
+          "The site shows the soonest-closing tenders within the next-14-days window, not every notice in that window (at the launch check on November 18, 2026, the window held more than 22,000 notices). Daily new-notice counts vary with official publishing pace and are not estimated here."
+        ]
+      },
+      {
+        "h": "Made by",
+        "paras": [
+          "Staroltest, built and maintained with the HOT pipeline template."
+        ]
+      }
+    ],
+    "audience": "盯巴西政府采购机会的中小企业",
+    "audience_en": "SMEs tracking Brazilian government procurement opportunities",
+    "crawler_name": "BrazilProcurementHOTBot/1.0",
+    "description": "聚合巴西国家公共采购门户 PNCP 的政府招标：医疗卫生、教育、工程与基建、交通与车辆、食品与餐饮、信息技术、综合服务、物资与设备八类，标题与简介均为本站原创改写，只附官方公告链接，每半小时更新。",
+    "description_en": "Government tenders from Brazil's national procurement portal PNCP across eight categories — health, education, works, transport, food, IT, services and supplies. Titles and one-line summaries are rewritten in our own words, with links to the official notices, updated every 30 minutes.",
+    "edition_time_cst": "06:00",
+    "footer_note": "数据来自巴西国家公共采购门户 PNCP（pncp.gov.br），本站标题与简介均为原创改写，不转载官方公告原文；参与投标请以 PNCP 官方公告为准。本站由 HOT 流水线模板生成，代码按 MIT 协议开源。",
+    "footer_note_en": "Data comes from PNCP, Brazil's national public procurement portal (pncp.gov.br). Titles and summaries here are rewritten in our own words; no official notice text is republished. Always rely on the official PNCP notice when bidding. Built with the HOT pipeline template; code is open source under the MIT License.",
+    "launch_date": "2026-11-18",
+    "mcp_url": "https://brazil-procurement-hot.pages.dev/mcp",
+    "mirror_url": "https://brazil-procurement-hot.pages.dev",
+    "name": "巴西政府采购HOT",
+    "repo": "https://github.com/Staroltest/brazil-procurement-hot",
+    "slug": "brazil-procurement-hot",
+    "subtitle": "盯新标、盯截标日：巴西各级政府采购公告聚合，每半小时更新",
+    "subtitle_en": "New tenders and closing deadlines from Brazil's official procurement portal, updated every 30 minutes",
+    "tagline": "巴西政府采购HOT：把 PNCP 上即将截标的政府招标，按城市、类别和方式整理成中小企业看得懂的清单。",
+    "tagline_en": "Brazil Procurement HOT: upcoming government tender deadlines from PNCP, organised by city, category and procedure for SMEs.",
+    "timezone": "Asia/Shanghai",
+    "tips": [
+      {
+        "address": "TBH8fAi6Vbr9G4VW3PDm3DugZU6fknr6na",
+        "image": "assets/tip-usdt.png",
+        "label": "USDT · TRC20"
+      },
+      {
+        "address": "7pitxN5xECR2NH2qdhFiSRC3fDdMsmVczqFSY4Zz4v5H",
+        "image": "assets/tip-usdt-sol.png",
+        "label": "USDT · Solana"
+      }
+    ],
+    "title": "巴西政府采购HOT · 政府招标聚合",
+    "title_en": "Brazil Procurement HOT",
+    "url": "https://staroltest.github.io/brazil-procurement-hot",
+    "web_analytics_token": "7300ff2b0dbd45789b6b97542ea9112d",
+    "name_en": "Brazil Procurement HOT"
+  }
+}

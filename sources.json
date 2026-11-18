@@ -1,0 +1,4 @@
+{
+  "comment": "本站信源不是 RSS：唯一信源是 PNCP 查询 API（公开、免注册、免 key），由 tools/pncp_fetch.py 每半小时抓取并写进本地 data/store.json 与 data/zh_draft.json，generate.py 再据此生成全站。RSS 列表置空是刻意的，不要往这里加 PNCP 链接（它返回 JSON，RSS 解析必失败）。2026-11-18 实测：proposta 接口 200，窗口 20261118-20261202 共 22778 条。",
+  "sources": []
+}
