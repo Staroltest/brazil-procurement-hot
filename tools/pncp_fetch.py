@@ -229,7 +229,7 @@ def build_texts(rec):
     cat_title_zh, cat_phrase_zh = CAT_ZH[cat]
     cat_title_en, cat_phrase_en = CAT_EN[cat]
 
-    zh_title = f"{place_zh}{cat_title_zh} · {mod_zh}"
+    zh_title = f"{place_zh}{' ' if not place_zh.endswith('）') else ''}{cat_title_zh} · {mod_zh}"
     en_title = f"{place_en} {cat_title_en} · {mod_en}"
     if dl_zh:
         zh_title += f" · {dl_zh.split(' ')[0]}截止"
@@ -242,7 +242,7 @@ def build_texts(rec):
     money_en = f", with an estimated value of about {money}" if money else ""
     dl_clause_zh = f"，提案截止时间为 {dl_zh}（巴西利亚时间）" if dl_zh else ""
     dl_clause_en = f"; proposals close {dl_en} (Brasília time)" if dl_en else ""
-    zh_one = (f"{place_zh}一公共机构以{mod_zh}方式采购{cat_phrase_zh}"
+    zh_one = (f"{place_zh}{' ' if not place_zh.endswith('）') else ''}一公共机构以{mod_zh}方式采购{cat_phrase_zh}"
               f"{money_zh}{dl_clause_zh}，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。")
     en_one = (f"A public buyer in {place_en} is procuring {cat_phrase_en} through "
               f"{mod_en}{money_en}{dl_clause_en}, so interested SMEs should check the "
@@ -341,7 +341,7 @@ def contract_to_entries(rec, now):
     signed = parse_dt(rec.get("dataAssinatura"))
     until = parse_dt(rec.get("dataVigenciaFim"))
 
-    zh_title = f"{place_zh}{cat_title_zh} · 合同已签 #{num}"
+    zh_title = f"{place_zh}{' ' if not place_zh.endswith('）') else ''}{cat_title_zh} · 合同已签 #{num}"
     en_title = f"{place_en} {cat_title_en} · signed contract #{num}"
     money_zh = f"，合同金额约 {money}" if money else ""
     money_en = f", with a contract value of about {money}" if money else ""
@@ -357,7 +357,7 @@ def contract_to_entries(rec, now):
         tail_en += f"; signed {fmt_date_en_y(signed)}"
     if until:
         tail_en += f", in force until {fmt_date_en_y(until)}"
-    zh_one = (f"{place_zh}一公共机构已就{cat_phrase_zh}签订合同{sup_zh}{money_zh}"
+    zh_one = (f"{place_zh}{' ' if not place_zh.endswith('）') else ''}一公共机构已就{cat_phrase_zh}签订合同{sup_zh}{money_zh}"
               f"{tail_zh}。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。")
     en_one = (f"A public buyer in {place_en} has signed a contract for {cat_phrase_en}"
               f"{sup_en}{money_en}{tail_en}. It is a closed deal rather than an open "
@@ -417,7 +417,7 @@ def ata_to_entries(rec, now):
     cat_title_en, cat_phrase_en = CAT_EN[cat]
     num = (rec.get("numeroAtaRegistroPreco") or "").strip() or str(seq_ata_i)
 
-    zh_title = f"{place_zh}{cat_title_zh} · 价格登记 Ata {num}"
+    zh_title = f"{place_zh}{' ' if not place_zh.endswith('）') else ''}{cat_title_zh} · 价格登记 Ata {num}"
     en_title = f"{place_en} {cat_title_en} · price registration ata {num}"
     until_zh = f"，有效期至 {fmt_date_zh_y(until)}" if until else ""
     until_en = f" until {fmt_date_en_y(until)}" if until else ""
