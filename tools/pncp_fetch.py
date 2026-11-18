@@ -250,7 +250,7 @@ def build_texts(rec):
     return cat, zh_title, en_title, zh_one, en_one
 
 
-def record_to_entries(rec, now):
+def record_to_entries(rec, now, source="PNCP", source_id="pncp"):
     cnpj = ((rec.get("orgaoEntidade") or {}).get("cnpj") or "").strip()
     ano = rec.get("anoCompra")
     seq = rec.get("sequencialCompra")
@@ -265,10 +265,180 @@ def record_to_entries(rec, now):
         "id": hashlib.sha1(link.encode()).hexdigest(),
         "title": en_title,  # 原始 title 字段放本站原创英文标题，不放源站任何文字
         "link": link,
-        "source": "PNCP",
-        "source_id": "pncp",
+        "source": source,
+        "source_id": source_id,
         "published": pub.astimezone(timezone.utc).isoformat(),
         "summary": rec.get("objetoCompra") or "",  # 仅本地 store 用，不公开
+        "fetched_at": now.isoformat(),
+        "category": cat,
+    }
+    draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
+             "en_title": en_title, "en_oneliner": en_one}
+    return entry, draft
+
+
+_SMALL_WORDS = {"de", "da", "do", "das", "dos", "e", "em", "a", "o"}
+_ACRONYMS = {"LTDA", "ME", "EPP", "EIRELI", "SA", "S/A", "CNPJ", "UF"}
+
+
+def pretty_name(name):
+    """PNCP 合同/价格登记里的机构名常是全大写，转成正常大小写好看些。
+    已经是混合大小写的原样返回；缩略词保持大写，de/da/do 等小词小写。"""
+    s = (name or "").strip()
+    if not s:
+        return ""
+    letters = [c for c in s if c.isalpha()]
+    if not letters or sum(1 for c in letters if c.isupper()) < 0.8 * len(letters):
+        return s
+    out = []
+    for i, w in enumerate(s.split()):
+        core = w.strip(".,;:")
+        if core.upper() in _ACRONYMS:
+            out.append(w.upper())
+        elif i > 0 and core.lower() in _SMALL_WORDS:
+            out.append(w.lower())
+        else:
+            out.append(w[:1].upper() + w[1:].lower())
+    return " ".join(out)
+
+
+def fmt_date_zh(dt):
+    return f"{dt.month}月{dt.day}日" if dt else ""
+
+
+def fmt_date_en(dt):
+    return f"{MONTHS_EN[dt.month - 1]} {dt.day}" if dt else ""
+
+
+def fmt_date_zh_y(dt):
+    return f"{dt.year}年{dt.month}月{dt.day}日" if dt else ""
+
+
+def fmt_date_en_y(dt):
+    return f"{MONTHS_EN[dt.month - 1]} {dt.day}, {dt.year}" if dt else ""
+
+
+def contract_to_entries(rec, now):
+    """PNCP 已签合同：事实字段原创标题/简介。合同不是可投标公告，
+    标题明写「合同已签」，简介写供应商、金额、签约日与有效期。"""
+    cnpj = ((rec.get("orgaoEntidade") or {}).get("cnpj") or "").strip()
+    ano = rec.get("anoContrato")
+    seq = rec.get("sequencialContrato")
+    if not (cnpj and ano and seq):
+        return None
+    link = norm_link(f"https://pncp.gov.br/app/contratos/{cnpj}/{ano}/{seq}")
+    uni = rec.get("unidadeOrgao") or {}
+    city = (uni.get("municipioNome") or "").strip()
+    uf = (uni.get("ufSigla") or "").strip()
+    place_zh = f"{city}（{uf}）" if city and uf else (city or "巴西")
+    place_en = f"{city} ({uf})" if city and uf else (city or "Brazil")
+    cat = classify(rec.get("objetoContrato"))
+    cat_title_zh, cat_phrase_zh = CAT_ZH[cat]
+    cat_title_en, cat_phrase_en = CAT_EN[cat]
+    num = (rec.get("numeroContratoEmpenho") or "").strip() or str(seq)
+    money = fmt_money(rec.get("valorGlobal") or rec.get("valorInicial"))
+    supplier = pretty_name(rec.get("nomeRazaoSocialFornecedor") or "")
+    signed = parse_dt(rec.get("dataAssinatura"))
+    until = parse_dt(rec.get("dataVigenciaFim"))
+
+    zh_title = f"{place_zh}{cat_title_zh} · 合同已签 #{num}"
+    en_title = f"{place_en} {cat_title_en} · signed contract #{num}"
+    money_zh = f"，合同金额约 {money}" if money else ""
+    money_en = f", with a contract value of about {money}" if money else ""
+    sup_zh = f"，供应商为 {supplier}" if supplier else ""
+    sup_en = f", awarded to {supplier}" if supplier else ""
+    tail_zh = ""
+    if signed:
+        tail_zh += f"，签约于 {fmt_date_zh_y(signed)}"
+    if until:
+        tail_zh += f"，有效期至 {fmt_date_zh_y(until)}"
+    tail_en = ""
+    if signed:
+        tail_en += f"; signed {fmt_date_en_y(signed)}"
+    if until:
+        tail_en += f", in force until {fmt_date_en_y(until)}"
+    zh_one = (f"{place_zh}一公共机构已就{cat_phrase_zh}签订合同{sup_zh}{money_zh}"
+              f"{tail_zh}。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。")
+    en_one = (f"A public buyer in {place_en} has signed a contract for {cat_phrase_en}"
+              f"{sup_en}{money_en}{tail_en}. It is a closed deal rather than an open "
+              f"tender; see the official PNCP contract page for the full text and "
+              f"performance details.")
+    pub = (parse_dt(rec.get("dataPublicacaoPncp"))
+           or parse_dt(rec.get("dataAtualizacaoGlobal"))
+           or parse_dt(rec.get("dataAssinatura")) or now)
+    entry = {
+        "id": hashlib.sha1(link.encode()).hexdigest(),
+        "title": en_title,
+        "link": link,
+        "source": "PNCP Contratos",
+        "source_id": "pncp-contratos",
+        "published": pub.astimezone(timezone.utc).isoformat(),
+        "summary": rec.get("objetoContrato") or "",  # 仅本地 store 用，不公开
+        "fetched_at": now.isoformat(),
+        "category": cat,
+    }
+    draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
+             "en_title": en_title, "en_oneliner": en_one}
+    return entry, draft
+
+
+def ata_to_entries(rec, now):
+    """PNCP 价格登记（Ata de Registro de Preços）：现行有效的登记记录，
+    中小企业可据此看登记价格并申请参与（adesão）。"""
+    if rec.get("cancelado"):
+        return None
+    ctrl = (rec.get("numeroControlePNCPAta") or "").strip()
+    # 形如 45780103000150-1-000001/2023-000001（cnpj-tipo-seqCompra/ano-seqAta）
+    import re as _re
+    m = _re.match(r"^(\d{14})-\d+-(\d+)/(\d+)-(\d+)$", ctrl)
+    if not m:
+        return None
+    cnpj = m.group(1)
+    seq_compra = int(m.group(2))
+    ano = int(m.group(3))
+    seq_ata_i = int(m.group(4))
+    until = parse_dt(rec.get("vigenciaFim"))
+    if until and not (2026 <= until.year <= 2035):
+        return None  # 脏数据（如年份 7203）直接跳过
+    link = norm_link(f"https://pncp.gov.br/app/atas/{cnpj}/{ano}/{seq_compra}/{seq_ata_i}")
+    orgao_raw = (rec.get("nomeOrgao") or "").strip()
+    orgao = pretty_name(orgao_raw)
+    city = ""
+    low = orgao_raw.lower()
+    for prefix in ("municipio de ", "município de ", "prefeitura municipal de ",
+                   "prefeitura de "):
+        if low.startswith(prefix):
+            city = pretty_name(orgao_raw[len(prefix):])
+            break
+    place_zh = city or orgao or "巴西"
+    place_en = city or orgao or "Brazil"
+    cat = classify(rec.get("objetoContratacao"))
+    cat_title_zh, cat_phrase_zh = CAT_ZH[cat]
+    cat_title_en, cat_phrase_en = CAT_EN[cat]
+    num = (rec.get("numeroAtaRegistroPreco") or "").strip() or str(seq_ata_i)
+
+    zh_title = f"{place_zh}{cat_title_zh} · 价格登记 Ata {num}"
+    en_title = f"{place_en} {cat_title_en} · price registration ata {num}"
+    until_zh = f"，有效期至 {fmt_date_zh_y(until)}" if until else ""
+    until_en = f" until {fmt_date_en_y(until)}" if until else ""
+    subject_zh = f"{orgao}" if orgao else place_zh
+    zh_one = (f"{subject_zh}的{cat_phrase_zh}价格登记（Ata {num}）现行有效{until_zh}。"
+              f"中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。")
+    en_one = (f"A price registration record (ata {num}) for {cat_phrase_en} published by "
+              f"{orgao or place_en} is currently in force{until_en}. SMEs can check the "
+              f"registered prices and suppliers on the official PNCP page and see how to "
+              f"join (adesão).")
+    pub = (parse_dt(rec.get("dataPublicacaoPncp"))
+           or parse_dt(rec.get("dataInclusao"))
+           or parse_dt(rec.get("dataAtualizacaoGlobal")) or now)
+    entry = {
+        "id": hashlib.sha1(link.encode()).hexdigest(),
+        "title": en_title,
+        "link": link,
+        "source": "PNCP Atas",
+        "source_id": "pncp-atas",
+        "published": pub.astimezone(timezone.utc).isoformat(),
+        "summary": rec.get("objetoContratacao") or "",  # 仅本地 store 用，不公开
         "fetched_at": now.isoformat(),
         "category": cat,
     }
@@ -307,10 +477,10 @@ def main():
 
     counters = {"got": 0, "added": 0}
 
-    def process(rows):
+    def process(rows, builder=record_to_entries):
         for rec in rows:
             counters["got"] += 1
-            built = record_to_entries(rec, now)
+            built = builder(rec, now)
             if not built:
                 continue
             entry, texts = built
@@ -364,6 +534,105 @@ def main():
                   f"{first.get('totalRegistros')} in 3d)", flush=True)
         except Exception as e:  # noqa: BLE001
             print(f"pncp pub mod {mod} failed: {e}", file=sys.stderr)
+
+    # 切片 C：PNCP 已签合同（contratos，按发布时间窗口，取最后一页=最新一批）
+    pub_ini_ymd = (today_brt - timedelta(days=2)).strftime("%Y%m%d")
+    try:
+        base = ("https://pncp.gov.br/api/consulta/v1/contratos?"
+                + urllib.parse.urlencode({
+                    "dataInicial": pub_ini_ymd, "dataFinal": d_ini,
+                    "tamanhoPagina": PAGE_SIZE}))
+        first = fetch_json(base + "&pagina=1")
+        tp = first.get("totalPaginas") or 1
+        resp = first if tp == 1 else fetch_json(base + f"&pagina={tp}")
+        rows = resp.get("data") or []
+        process(rows, contract_to_entries)
+        print(f"pncp contratos: {len(rows)} newest (of "
+              f"{first.get('totalRegistros')} in 3d)", flush=True)
+    except Exception as e:  # noqa: BLE001
+        print(f"pncp contratos failed: {e}", file=sys.stderr)
+
+    # 切片 D：PNCP 价格登记（atas，接口按录入升序且日期参数基本无效，
+    # 取最后两页再按发布时间在本地过滤最近 3 天；单页可慢到 40 秒以上）
+    try:
+        base = ("https://pncp.gov.br/api/consulta/v1/atas?"
+                + urllib.parse.urlencode({
+                    "dataInicial": pub_ini_ymd, "dataFinal": d_ini,
+                    "tamanhoPagina": PAGE_SIZE}))
+        first = fetch_json(base + "&pagina=1")
+        tp = first.get("totalPaginas") or 1
+        rows = []
+        for pg in {tp, max(1, tp - 1)}:
+            resp = first if pg == 1 else fetch_json(base + f"&pagina={pg}")
+            rows.extend(resp.get("data") or [])
+        cutoff = now - timedelta(days=3)
+        fresh = []
+        for r in rows:
+            pub = (parse_dt(r.get("dataPublicacaoPncp"))
+                   or parse_dt(r.get("dataInclusao")))
+            if pub and pub >= cutoff:
+                fresh.append(r)
+        process(fresh, ata_to_entries)
+        print(f"pncp atas: {len(fresh)} fresh of {len(rows)} on last pages "
+              f"(total {first.get('totalRegistros')})", flush=True)
+    except Exception as e:  # noqa: BLE001
+        print(f"pncp atas failed: {e}", file=sys.stderr)
+
+    # 切片 E：ComprasNet（compras.gov.br 开放数据，PNCP 镜像口径，
+    # 与 PNCP 同链接天然去重；内部方式码 5=电子竞价 6=免招标 7=不经招标）
+    pub_ini_iso = (today_brt - timedelta(days=2)).isoformat()
+    pub_fim_iso = today_brt.isoformat()
+    for mod in (5, 6, 7):
+        base = ("https://dadosabertos.compras.gov.br/modulo-contratacoes/"
+                "1_consultarContratacoes_PNCP_14133?"
+                + urllib.parse.urlencode({
+                    "dataPublicacaoPncpInicial": pub_ini_iso,
+                    "dataPublicacaoPncpFinal": pub_fim_iso,
+                    "codigoModalidade": mod, "tamanhoPagina": PAGE_SIZE}))
+        try:
+            first = fetch_json(base + "&pagina=1")
+            tp = first.get("totalPaginas") or 1
+            resp = first if tp == 1 else fetch_json(base + f"&pagina={tp}")
+            rows = resp.get("resultado") or []
+            pseudo = []
+            for r in rows:
+                pseudo.append({
+                    "orgaoEntidade": {"cnpj": r.get("orgaoEntidadeCnpj")},
+                    "unidadeOrgao": {
+                        "municipioNome": pretty_name(
+                            r.get("unidadeOrgaoMunicipioNome") or ""),
+                        "ufSigla": r.get("unidadeOrgaoUfSigla")},
+                    "objetoCompra": r.get("objetoCompra"),
+                    "modalidadeNome": r.get("modalidadeNome"),
+                    "valorTotalEstimado": r.get("valorTotalEstimado"),
+                    "dataEncerramentoProposta": r.get("dataEncerramentoPropostaPncp"),
+                    "dataPublicacaoPncp": r.get("dataPublicacaoPncp"),
+                    "dataAtualizacaoGlobal": r.get("dataPublicacaoPncp"),
+                    "anoCompra": r.get("anoCompraPncp"),
+                    "sequencialCompra": r.get("sequencialCompraPncp"),
+                    "numeroCompra": str(r.get("sequencialCompraPncp") or ""),
+                })
+            before = counters["added"]
+            for rec in pseudo:
+                counters["got"] += 1
+                built = record_to_entries(rec, now, source="ComprasNet",
+                                           source_id="comprasnet")
+                if not built:
+                    continue
+                entry, texts = built
+                if entry["id"] not in by_id:
+                    by_id[entry["id"]] = entry
+                    counters["added"] += 1
+                key = norm_link(entry["link"])
+                cur = draft.get(key, {})
+                for k, v in texts.items():
+                    cur.setdefault(k, v)
+                draft[key] = cur
+            print(f"comprasnet mod {mod}: {len(rows)} newest, "
+                  f"{counters['added'] - before} new after dedup (of "
+                  f"{first.get('totalRegistros')} in 3d)", flush=True)
+        except Exception as e:  # noqa: BLE001
+            print(f"comprasnet mod {mod} failed: {e}", file=sys.stderr)
 
     got, added = counters["got"], counters["added"]
 

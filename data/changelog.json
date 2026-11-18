@@ -1,1 +1,21 @@
-{"comment": "更新日志：手动维护，每次改版在最前面加一条。version 用日期（YYYY-MM-DD），/more 页的红点靠它判断有没有新内容。", "entries": [{"date": "2026-11-18", "items": ["第一版上线：聚合 PNCP 未来 14 天内截止的政府招标，八个类别，中英双语，每半小时更新。", "标题与一句话简介均为本站原创改写，不转载官方公告原文；每条附 PNCP 官方公告链接。"], "items_en": ["First release: government tenders closing within the next 14 days on PNCP, across eight categories, in Chinese and English, updated every 30 minutes.", "Titles and one-line summaries are rewritten in our own words; no official notice text is republished, and every item links to its official PNCP notice."], "title": "第一版上线", "title_en": "First release", "version": "2026-11-18"}]}
+{
+  "comment": "更新日志：手动维护，每次改版在最前面加一条。version 用日期（YYYY-MM-DD），/more 页的红点靠它判断有没有新内容。",
+  "entries": [
+    {
+      "date": "2026-11-18",
+      "items": [
+        "第一版上线：聚合 PNCP 未来 14 天内截止的政府招标，八个类别，中英双语，每半小时更新。",
+        "标题与一句话简介均为本站原创改写，不转载官方公告原文；每条附 PNCP 官方公告链接。",
+        "新增数据源：PNCP 已签合同与价格登记（Ata）两个切片、联邦采购平台 ComprasNet 开放数据，站点条目来源更全。"
+      ],
+      "items_en": [
+        "First release: government tenders closing within the next 14 days on PNCP, across eight categories, in Chinese and English, updated every 30 minutes.",
+        "Titles and one-line summaries are rewritten in our own words; no official notice text is republished, and every item links to its official PNCP notice.",
+        "New sources added: PNCP signed contracts and price registration (ata) slices, plus the ComprasNet federal open-data API."
+      ],
+      "title": "第一版上线",
+      "title_en": "First release",
+      "version": "2026-11-18"
+    }
+  ]
+}

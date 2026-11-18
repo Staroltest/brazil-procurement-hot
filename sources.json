@@ -1,4 +1,4 @@
 {
-  "comment": "本站信源不是 RSS：唯一信源是 PNCP 查询 API（公开、免注册、免 key），由 tools/pncp_fetch.py 每半小时抓取并写进本地 data/store.json 与 data/zh_draft.json，generate.py 再据此生成全站。RSS 列表置空是刻意的，不要往这里加 PNCP 链接（它返回 JSON，RSS 解析必失败）。2026-11-18 实测：proposta 接口 200，窗口 20261118-20261202 共 22778 条。",
+  "comment": "本站信源不是 RSS：信源是两个公开 API 平台。① PNCP 查询 API（pncp.gov.br/api/consulta，免注册免 key）：proposta（即将截止）、publicacao（最新发布）、contratos（已签合同）、atas（价格登记）四个切片；② ComprasNet 开放数据 API（dadosabertos.compras.gov.br，免 key）：modulo-contratacoes 的 PNCP 镜像口径，方式码 5/6/7，与 PNCP 同链接天然去重。全部由 tools/pncp_fetch.py 每半小时抓取并写进本地 data/store.json 与 data/zh_draft.json，generate.py 再据此生成全站。RSS 列表置空是刻意的，不要往这里加链接。2026-11-18 实测：proposta 窗口 14 天 22778 条；contratos 最近 3 天约 1.6 万份；atas 总量约 48 万条取最新页；ComprasNet 旧 legado 接口数据冻结在 2025 年中，不可用，已弃用。",
   "sources": []
 }
