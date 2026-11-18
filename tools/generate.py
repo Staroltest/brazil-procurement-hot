@@ -4392,6 +4392,11 @@ def main():
     tag_counts = []
     topics_dir = os.path.join(root, "topics")
     os.makedirs(topics_dir, exist_ok=True)
+    # 主题页每轮按当前标签集全量重写：先清掉旧文件，避免标签改名后
+    # 残留页留在磁盘上（会让 geo-audit 的 sitemap 漏页检查误报失败）
+    for _fn in os.listdir(topics_dir):
+        if _fn.endswith(".html"):
+            os.remove(os.path.join(topics_dir, _fn))
     for label in sorted(tag_items, key=lambda l: -len(tag_items[l])):
         items = sorted(tag_items[label], key=lambda x: x["_pub"], reverse=True)[:50]
         slug = TAG_SLUGS.get(label, label)
@@ -4408,6 +4413,9 @@ def main():
     tag_counts_en = []
     en_topics_dir = os.path.join(en_root, "topics")
     os.makedirs(en_topics_dir, exist_ok=True)
+    for _fn in os.listdir(en_topics_dir):
+        if _fn.endswith(".html"):
+            os.remove(os.path.join(en_topics_dir, _fn))
     for label in sorted(tag_items_en, key=lambda l: -len(tag_items_en[l])):
         items = sorted(tag_items_en[label], key=lambda x: x["_pub"], reverse=True)[:50]
         slug = TAG_SLUGS_EN.get(label, label)

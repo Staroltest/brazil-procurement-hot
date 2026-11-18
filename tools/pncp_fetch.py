@@ -544,8 +544,10 @@ def main():
                     "tamanhoPagina": PAGE_SIZE}))
         first = fetch_json(base + "&pagina=1")
         tp = first.get("totalPaginas") or 1
-        resp = first if tp == 1 else fetch_json(base + f"&pagina={tp}")
-        rows = resp.get("data") or []
+        rows = []
+        for pg in {tp, max(1, tp - 1)}:
+            resp = first if pg == 1 else fetch_json(base + f"&pagina={pg}")
+            rows.extend(resp.get("data") or [])
         process(rows, contract_to_entries)
         print(f"pncp contratos: {len(rows)} newest (of "
               f"{first.get('totalRegistros')} in 3d)", flush=True)
@@ -592,8 +594,10 @@ def main():
         try:
             first = fetch_json(base + "&pagina=1")
             tp = first.get("totalPaginas") or 1
-            resp = first if tp == 1 else fetch_json(base + f"&pagina={tp}")
-            rows = resp.get("resultado") or []
+            rows = []
+            for pg in {tp, max(1, tp - 1)}:
+                resp = first if pg == 1 else fetch_json(base + f"&pagina={pg}")
+                rows.extend(resp.get("resultado") or [])
             pseudo = []
             for r in rows:
                 pseudo.append({
