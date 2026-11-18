@@ -4810,25 +4810,39 @@ def main():
     os.makedirs(items_dir, exist_ok=True)
     en_items_dir = os.path.join(en_root, "items")
     os.makedirs(en_items_dir, exist_ok=True)
+    # 2026-11-19 推送故障根因：相关条目按 score 取同类前 5，分数每轮衰减，
+    # 导致全部约 3200 个详情页每轮都变内容，每次推送要建 3200 个 blob，
+    # 先后触发 GitHub 二级限流 403 与大树提交 502。改成只取发布时间
+    # 不晚于本条的同类条目（按发布时间倒序、id 排序）：旧条目的相关列表
+    # 随时间冻结，只有新条目与近期条目会变，推送量回到每轮两三百个 blob。
+    def _pub_key(x):
+        return (x.get("published") or "0000", x["id"])
     by_cat = {}
     by_src = {}
     for it in live:
         by_cat.setdefault(it["category"], []).append(it)
         by_src.setdefault(it["source_id"], []).append(it)
     for lst in list(by_cat.values()) + list(by_src.values()):
-        lst.sort(key=lambda x: x["score"], reverse=True)
+        lst.sort(key=_pub_key, reverse=True)
     n_items = 0
     for it in live:
+        my_pub = it.get("published") or "0000"
         picked = []
         for cand in by_cat.get(it["category"], []):
-            if cand["id"] != it["id"] and cand not in picked:
-                picked.append(cand)
+            if cand["id"] == it["id"] or cand in picked:
+                continue
+            if (cand.get("published") or "0000") > my_pub:
+                continue
+            picked.append(cand)
             if len(picked) >= 5:
                 break
         if len(picked) < 5:
             for cand in by_src.get(it["source_id"], []):
-                if cand["id"] != it["id"] and cand not in picked:
-                    picked.append(cand)
+                if cand["id"] == it["id"] or cand in picked:
+                    continue
+                if (cand.get("published") or "0000") > my_pub:
+                    continue
+                picked.append(cand)
                 if len(picked) >= 5:
                     break
         # 详情页只用 pub_item 的发布字段（标题 + 一句话简介），不并完整摘要。
