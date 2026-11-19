@@ -43,8 +43,8 @@
 - Transport & vehicles / 交通与车辆
 - Food & catering / 食品与餐饮
 - IT & technology / 信息技术
-- Services & outsourcing / 综合服务
 - Supplies & equipment / 物资与设备
+- Services & outsourcing / 综合服务
 
 ## Rules
 

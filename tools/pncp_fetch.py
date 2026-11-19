@@ -137,6 +137,25 @@ CAT_EN = {
     "services": ("Services procurement", "professional or outsourced services"),
     "supplies": ("Supplies & equipment procurement", "supplies, equipment or consumables"),
 }
+CAT_LABEL = {  # 与 config.json categories[].label 保持一致
+    "health": "医疗卫生", "education": "教育", "works": "工程与基建",
+    "transport": "交通与车辆", "food": "食品与餐饮", "tech": "信息技术",
+    "services": "综合服务", "supplies": "物资与设备",
+}
+# 新条目直接写全 tags/tier/category_label：generate.py 只给缺 tags/tier/
+# category 的老条目回填派生字段，写全后它不再用 config.json 关键词重算并
+# 覆盖本站已按 objetoCompra 分好的类别。2026-11-19 把关发现：回填曾把 114
+# 条的类别改错（如信息技术误判为综合服务、物资误判为教育/医疗卫生），导致
+# 标题与类别芯片不一致；tags 留空列表即可，generate.py 在内存里重算标签。
+
+
+def past_deadline(rec, today_brt):
+    """提案截止日已过（按巴西利亚日期比）：切片 B/E 里新发布的多为已截止的
+    转载/结果公示，不再是可投标机会，跳过。无截止日或解析失败的保留。"""
+    dl = (rec.get("dataEncerramentoProposta") or "")[:10]
+    if len(dl) != 10 or dl[4] != "-" or dl[7] != "-":
+        return False
+    return dl < today_brt.isoformat()
 
 
 def classify(objeto):
@@ -271,6 +290,9 @@ def record_to_entries(rec, now, source="PNCP", source_id="pncp"):
         "summary": rec.get("objetoCompra") or "",  # 仅本地 store 用，不公开
         "fetched_at": now.isoformat(),
         "category": cat,
+        "category_label": CAT_LABEL[cat],
+        "tier": "T2",  # generate.py 的分级回填默认值，见文件头注释
+        "tags": [],  # 标签由 generate.py 在内存里重算；写空列表只为阻止回填覆盖类别
     }
     draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
              "en_title": en_title, "en_oneliner": en_one}
@@ -376,6 +398,9 @@ def contract_to_entries(rec, now):
         "summary": rec.get("objetoContrato") or "",  # 仅本地 store 用，不公开
         "fetched_at": now.isoformat(),
         "category": cat,
+        "category_label": CAT_LABEL[cat],
+        "tier": "T2",
+        "tags": [],
     }
     draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
              "en_title": en_title, "en_oneliner": en_one}
@@ -441,6 +466,9 @@ def ata_to_entries(rec, now):
         "summary": rec.get("objetoContratacao") or "",  # 仅本地 store 用，不公开
         "fetched_at": now.isoformat(),
         "category": cat,
+        "category_label": CAT_LABEL[cat],
+        "tier": "T2",
+        "tags": [],
     }
     draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
              "en_title": en_title, "en_oneliner": en_one}
@@ -529,6 +557,7 @@ def main():
             tp = first.get("totalPaginas") or 1
             resp = first if tp == 1 else fetch_json(base + f"&pagina={tp}")
             rows = resp.get("data") or []
+            rows = [r for r in rows if not past_deadline(r, today_brt)]
             process(rows)
             print(f"pncp pub mod {mod}: {len(rows)} newest (of "
                   f"{first.get('totalRegistros')} in 3d)", flush=True)
@@ -616,6 +645,7 @@ def main():
                     "sequencialCompra": r.get("sequencialCompraPncp"),
                     "numeroCompra": str(r.get("sequencialCompraPncp") or ""),
                 })
+            pseudo = [p for p in pseudo if not past_deadline(p, today_brt)]
             before = counters["added"]
             for rec in pseudo:
                 counters["got"] += 1
