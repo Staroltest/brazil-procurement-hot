@@ -3860,6 +3860,7 @@ def build_geo_audit(site, root, site_url, today_iso):
     # 英文首页以 site_url/en/ 入 sitemap，等价于磁盘上的 en/index.html
     missing = sorted(f"{site_url}/{p}" for p in html_files
                      if f"{site_url}/{p}" not in sm_locs
+                     and f"{site_url}/{urllib.parse.quote(p, safe='/')}" not in sm_locs
                      and not (p == "index.html" and f"{site_url}/" in sm_locs)
                      and not (p == "en/index.html" and f"{site_url}/en/" in sm_locs))
     if sitemap and not missing:
@@ -4508,7 +4509,10 @@ def main():
     sm = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
           "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"]
     for _p, _lm in sitemap_entries.items():
-        sm.append(f"<url><loc>{site_url}/{_p}</loc><lastmod>{_lm}</lastmod></url>")
+        # sitemap 规范要求 loc 必须是 URL 编码形式：主题 slug 含葡语重音
+        # 与空格（如 topics/pregão.html、topics/registro de preços.html），
+        # 直接写原字符会被 GSC 判为无效链接；编码后仍指向同一磁盘文件
+        sm.append(f"<url><loc>{site_url}/{urllib.parse.quote(_p, safe='/')}</loc><lastmod>{_lm}</lastmod></url>")
     sm.append("</urlset>")
     with open(os.path.join(root, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write("\n".join(sm) + "\n")
