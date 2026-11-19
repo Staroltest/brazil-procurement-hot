@@ -39,8 +39,8 @@
 - Transport & vehicles
 - Food & catering
 - IT & technology
-- Services & outsourcing
 - Supplies & equipment
+- Services & outsourcing
 
 ## Rules
 
