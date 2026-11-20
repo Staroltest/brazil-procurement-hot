@@ -720,8 +720,22 @@ def main():
 
     got, added = counters["got"], counters["added"]
 
-    store["updated_at"] = now.isoformat()
-    store["items"] = list(by_id.values())
+    # 保存前重读合并（防并行写丢数据）：抓取耗时约 9 分钟，期间若另一任务
+    # （如字段修复脚本）改了 store.json / zh_draft.json，直接写回旧内存会
+    # 覆盖对方的改动——2026-11-20 09:25 轮次就这样冲掉过一次 811 条修复。
+    # 规则：磁盘现版优先，已存在条目保留磁盘版；本轮新增的才补进去。
+    # （本轮 process() 对已存在条目只 setdefault、不改写，所以内存里的
+    # 旧条目与加载时完全相同，丢弃它们不会丢失本轮成果。）
+    fresh_store = load_json(store_path, {"items": []})
+    fresh_by_id = {it["id"]: it for it in fresh_store.get("items", [])}
+    for _id, _entry in by_id.items():
+        fresh_by_id.setdefault(_id, _entry)
+    fresh_store["items"] = list(fresh_by_id.values())
+    fresh_store["updated_at"] = now.isoformat()
+    fresh_draft = load_json(draft_path, {})
+    for _k, _v in draft.items():
+        fresh_draft.setdefault(_k, _v)
+    store, draft = fresh_store, fresh_draft
     save_json(store_path, store)
     save_json(draft_path, draft)
     print(f"pncp: fetched {got} records in window {d_ini}-{d_fim}, "
