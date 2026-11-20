@@ -232,6 +232,27 @@ def deadline_parts(rec):
     return zh, en
 
 
+def _clean_numero(num):
+    """PNCP 的 numeroCompra 有时是自由文本（如 "Pregão Lei 14.133 Eletronico 16"、
+    "PREGÃO ELETRÔNICO Nº 051"、"13 | Processo 1104"），标题只保留公告编号本身；
+    无空格的代码（如 PRI 2、CR017、EMP00027/2026-SEDEPE-110501）原样保留。"""
+    import re as _re
+    if not num:
+        return ""
+    if "|" in num:
+        head, tail = num.split("|", 1)
+        if _re.search(r"[A-Za-zÀ-ÿ]{5,}", tail):
+            return _clean_numero(head.strip())
+        return num
+    if " " not in num:
+        return num
+    if _re.search(r"[A-Za-zÀ-ÿ]{5,}", num):
+        m = _re.search(r"(\d+(?:/\d+)?)\s*$", num)
+        if m:
+            return m.group(1)
+    return num
+
+
 def build_texts(rec):
     """按事实字段原创生成标题与一句话简介（中英）。绝不引用 objeto 原文。"""
     uni = rec.get("unidadeOrgao") or {}
@@ -241,7 +262,7 @@ def build_texts(rec):
     mod_zh, mod_en = modality(rec)
     dl_zh, dl_en = deadline_parts(rec)
     money = fmt_money(rec.get("valorTotalEstimado"))
-    num = (rec.get("numeroCompra") or "").strip()
+    num = _clean_numero((rec.get("numeroCompra") or "").strip())
 
     place_zh = f"{city}（{uf}）" if city and uf else (city or "巴西")
     place_en = f"{city} ({uf})" if city and uf else (city or "Brazil")
@@ -407,6 +428,38 @@ def contract_to_entries(rec, now):
     return entry, draft
 
 
+_ATA_DEPT_WORDS = {
+    "saude", "saúde", "educacao", "educação", "assistencia", "assistência",
+    "fazenda", "planejamento", "cultura", "esporte", "obras", "administracao",
+    "administração", "desenvolvimento", "trabalho", "agricultura", "turismo",
+    "seguranca", "segurança", "transporte", "habitacao", "habitação",
+    "acao social", "ação social", "assistencia social", "assistência social",
+}
+
+
+def _ata_city(orgao_raw):
+    """从价格登记的机构名里抠城市名：Secretaria Municipal de Educacao de
+    Jequie -> Jequie；州级/联邦机构（如 Instituto Federal ... do Piaui、
+    Secretaria da Fazenda）没有城市信息，返回空串。"""
+    import re as _re
+    low = (orgao_raw or "").lower()
+    rest = ""
+    for prefix in ("municipio de ", "município de ", "prefeitura municipal de ",
+                   "prefeitura de ", "secretaria municipal de ", "secretaria de ",
+                   "fundo municipal de ", "fundo de "):
+        if low.startswith(prefix):
+            rest = orgao_raw[len(prefix):]
+            break
+    if not rest:
+        return ""
+    parts = [p.strip() for p in _re.split(r"\s+de\s+|\s+do\s+|\s+da\s+",
+                                          rest, flags=_re.IGNORECASE)]
+    if len(parts) >= 2 and parts[0].lower() in _ATA_DEPT_WORDS:
+        tail = parts[-1]
+        return pretty_name(tail) if tail and tail.lower() not in _ATA_DEPT_WORDS else ""
+    return "" if rest.strip().lower() in _ATA_DEPT_WORDS else pretty_name(rest)
+
+
 def ata_to_entries(rec, now):
     """PNCP 价格登记（Ata de Registro de Preços）：现行有效的登记记录，
     中小企业可据此看登记价格并申请参与（adesão）。"""
@@ -428,13 +481,7 @@ def ata_to_entries(rec, now):
     link = norm_link(f"https://pncp.gov.br/app/atas/{cnpj}/{ano}/{seq_compra}/{seq_ata_i}")
     orgao_raw = (rec.get("nomeOrgao") or "").strip()
     orgao = pretty_name(orgao_raw)
-    city = ""
-    low = orgao_raw.lower()
-    for prefix in ("municipio de ", "município de ", "prefeitura municipal de ",
-                   "prefeitura de "):
-        if low.startswith(prefix):
-            city = pretty_name(orgao_raw[len(prefix):])
-            break
+    city = _ata_city(orgao_raw)
     place_zh = city or orgao or "巴西"
     place_en = city or orgao or "Brazil"
     cat = classify(rec.get("objetoContratacao"))
@@ -446,11 +493,14 @@ def ata_to_entries(rec, now):
     en_title = f"{place_en} {cat_title_en} · price registration ata {num}"
     until_zh = f"，有效期至 {fmt_date_zh_y(until)}" if until else ""
     until_en = f" until {fmt_date_en_y(until)}" if until else ""
-    subject_zh = f"{orgao}" if orgao else place_zh
+    # 简介主语不用葡语机构原名：有城市用城市，没有用中性主语，避免中文句里
+    # 夹一段 "Secretaria Municipal de ..."（此前 71 条新登记因此残留葡语）。
+    subject_zh = city or "该机构"
+    subject_en = city or "the responsible body"
     zh_one = (f"{subject_zh}的{cat_phrase_zh}价格登记（Ata {num}）现行有效{until_zh}。"
               f"中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。")
     en_one = (f"A price registration record (ata {num}) for {cat_phrase_en} published by "
-              f"{orgao or place_en} is currently in force{until_en}. SMEs can check the "
+              f"{subject_en} is currently in force{until_en}. SMEs can check the "
               f"registered prices and suppliers on the official PNCP page and see how to "
               f"join (adesão).")
     pub = (parse_dt(rec.get("dataPublicacaoPncp"))
