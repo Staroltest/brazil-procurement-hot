@@ -84,7 +84,9 @@ CAT_RULES = [
     ("health", ["saúde", "saude", "hospital", "medicamento", "farmac", "vacina",
                 "odontol", "médic", "medic", "enfermagem", "eletrocardiógrafo",
                 "ambulat", "clínic", "clinic", "laborator", "raio-x", "seringa",
-                "luva cirúrgica", "ubs", "upa ", "pronto socorro", "samu"]),
+                # "ubs" 必须带前导空格：裸子串会误命中 subsistência/substituição
+                # （2026-11-20 发现 91 条因此错标医疗卫生），独立词 UBS 仍命中。
+                "luva cirúrgica", " ubs", "upa ", "pronto socorro", "samu"]),
     ("education", ["educação", "educacao", "escola", "ensino", "universidade",
                    "creche", "didátic", "didatic", "pedagóg", "pedagog",
                    "biblioteca", "aluno", "docente", "merenda escolar é",
