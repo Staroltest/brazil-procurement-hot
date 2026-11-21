@@ -51610,5 +51610,29 @@
   "zh_oneliner": "Brasília（DF）一公共机构以不经招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 3,000，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
   "en_title": "Brasília (DF) Services procurement · direct award (inexigibilidade) #224",
   "en_oneliner": "A public buyer in Brasília (DF) is procuring professional or outsourced services through direct award (inexigibilidade), with an estimated value of about R$ 3,000, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/96291141000180/2026/8154": {
+  "zh_title": "Bernardino de Campos（SP）综合服务采购 · 免招标直接采购 #69",
+  "zh_oneliner": "Bernardino de Campos（SP）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 4,063.68，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Bernardino de Campos (SP) Services procurement · direct award (dispensa) #69",
+  "en_oneliner": "A public buyer in Bernardino de Campos (SP) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 4,063.68, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/23612685000122/2026/53": {
+  "zh_title": "Recife（PE）物资与设备采购 · 免招标直接采购 #5",
+  "zh_oneliner": "Recife（PE）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 5,419，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Recife (PE) Supplies & equipment procurement · direct award (dispensa) #5",
+  "en_oneliner": "A public buyer in Recife (PE) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 5,419, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/contratos/96291141000180/2026/18010": {
+  "zh_title": "Bernardino de Campos（SP）综合服务采购 · 合同已签 #2026NE01076",
+  "zh_oneliner": "Bernardino de Campos（SP）一公共机构已就专业服务或外包服务签订合同，供应商为 Maurino Jose Mariano de Almeida，合同金额约 R$ 4,063.68，签约于 2026年11月5日，有效期至 2026年12月9日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Bernardino de Campos (SP) Services procurement · signed contract #2026NE01076",
+  "en_oneliner": "A public buyer in Bernardino de Campos (SP) has signed a contract for professional or outsourced services, awarded to Maurino Jose Mariano de Almeida, with a contract value of about R$ 4,063.68; signed Nov 5, 2026, in force until Dec 9, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/06307102000130/2026/1400": {
+  "zh_title": "São Luís（MA）医疗卫生采购 · 合同已签 #753",
+  "zh_oneliner": "São Luís（MA）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Santisa Laboratorio Farmaceutico S.a，合同金额约 R$ 81,000，签约于 2026年11月16日，有效期至 2027年11月16日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Luís (MA) Health & medical procurement · signed contract #753",
+  "en_oneliner": "A public buyer in São Luís (MA) has signed a contract for healthcare goods or services, awarded to Santisa Laboratorio Farmaceutico S.a, with a contract value of about R$ 81,000; signed Nov 16, 2026, in force until Nov 16, 2027. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
  }
 }
