@@ -467,6 +467,7 @@ function computeMeta(it){
       if(text.indexOf(kw.toLowerCase())>-1)noiseHits++;
     });
     score+=Math.max(noiseHits*IH_CFG.noisePenalty,IH_CFG.noiseFloor);
+    if(typeof it.valor==='number'&&it.valor>0&&it.valor<(IH_CFG.tinyValorMax||1000))score-=(IH_CFG.tinyValorPenalty||15);
     score=Math.max(0,Math.min(100,score));
     if(!labels.length){
       var seen={};
