@@ -249,6 +249,12 @@ def score(item, cfg, now):
     total += min(dev_hits * sc["dev_keyword_bonus"], sc["dev_keyword_cap"])
     noise_hits = sum(1 for kw in sc["noise_keywords"] if kw.lower() in text)
     total += max(noise_hits * sc["noise_keyword_penalty"], sc["noise_keyword_floor"])
+    # 小额降权：金额多为按件计价的小额条目，对中小企业的机会价值低；
+    # valor 缺失或为 0 不扣（2026-11-22 拍板，阈值/扣分见 config scoring）
+    v = item.get("valor")
+    if (isinstance(v, (int, float)) and not isinstance(v, bool)
+            and 0 < v < sc.get("tiny_valor_max", 1000)):
+        total -= sc.get("tiny_valor_penalty", 15)
     return max(0, min(100, total))
 
 
@@ -1684,6 +1690,7 @@ function computeMeta(it){
       if(text.indexOf(kw.toLowerCase())>-1)noiseHits++;
     });
     score+=Math.max(noiseHits*IH_CFG.noisePenalty,IH_CFG.noiseFloor);
+    if(typeof it.valor==='number'&&it.valor>0&&it.valor<(IH_CFG.tinyValorMax||1000))score-=(IH_CFG.tinyValorPenalty||15);
     score=Math.max(0,Math.min(100,score));
     if(!labels.length){
       var seen={};
@@ -2735,6 +2742,8 @@ def render_index(site, cats, cfg, src_by_id, selected, hot, timeline, generated_
         "noiseKw": sc["noise_keywords"],
         "noisePenalty": sc["noise_keyword_penalty"],
         "noiseFloor": sc["noise_keyword_floor"],
+        "tinyValorMax": sc.get("tiny_valor_max", 1000),
+        "tinyValorPenalty": sc.get("tiny_valor_penalty", 15),
         "tagSlugs": TAG_SLUGS_EN if lang == "en" else TAG_SLUGS,
         "tiers": {sid: s.get("tier", "T2") for sid, s in src_by_id.items()},
     }
@@ -2844,6 +2853,8 @@ def render_all(site, cats, cfg, src_by_id, selected, hot, pool, generated_at, la
         "noiseKw": sc["noise_keywords"],
         "noisePenalty": sc["noise_keyword_penalty"],
         "noiseFloor": sc["noise_keyword_floor"],
+        "tinyValorMax": sc.get("tiny_valor_max", 1000),
+        "tinyValorPenalty": sc.get("tiny_valor_penalty", 15),
         "tagSlugs": TAG_SLUGS_EN if lang == "en" else TAG_SLUGS,
         "tiers": {sid: s.get("tier", "T2") for sid, s in src_by_id.items()},
     }
@@ -4270,7 +4281,7 @@ def main():
                 "zh_oneliner": it.get("zh_oneliner", ""),
                 "category": it["category"], "category_label": it["category_label"],
                 "tier": it.get("_tier", "T2"), "tags": it.get("tags", []),
-                "score": it["score"],
+                "score": it["score"], "valor": it.get("valor"),
                 "reason": it.get("reason", ""), "is_new": bool(it.get("is_new", False)),
                 "trend": it.get("trend", "same"),
                 "hot_score": it.get("hot_score", it["score"]),
@@ -4288,7 +4299,7 @@ def main():
                 "category": it["category"],
                 "category_label": it.get("category_label_en", it["category"]),
                 "tier": it.get("_tier", "T2"), "tags": it.get("tags_en", []),
-                "score": it["score"],
+                "score": it["score"], "valor": it.get("valor"),
                 "reason": it.get("reason_en", ""), "is_new": bool(it.get("is_new", False)),
                 "trend": it.get("trend", "same"),
                 "hot_score": it.get("hot_score", it["score"]),
@@ -4326,7 +4337,8 @@ def main():
                 "link": it["link"], "source": it["source"],
                 "source_id": it.get("source_id", ""),
                 "published": it["published"],
-                "score": it["score"], "tags": it.get("tags", []),
+                "score": it["score"], "valor": it.get("valor"),
+                "tags": it.get("tags", []),
                 "tier": it.get("_tier", "T2"), "category": it["category"],
                 "category_label": it["category_label"]}
 
@@ -4338,7 +4350,8 @@ def main():
                 "link": it["link"], "source": it["source"],
                 "source_id": it.get("source_id", ""),
                 "published": it["published"],
-                "score": it["score"], "tags": it.get("tags_en", []),
+                "score": it["score"], "valor": it.get("valor"),
+                "tags": it.get("tags_en", []),
                 "tier": it.get("_tier", "T2"), "category": it["category"],
                 "category_label": it.get("category_label_en", it["category"])}
     days_dir = os.path.join(data_dir, "days")

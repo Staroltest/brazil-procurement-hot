@@ -224,6 +224,14 @@ def fmt_money(v):
     return "R$ " + f"{v:,.2f}"
 
 
+def _num(v):
+    """金额字段转数值（valor 字段用）：取不到或非法返回 None。"""
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def deadline_parts(rec):
     dt = parse_dt(rec.get("dataEncerramentoProposta"))
     if not dt:
@@ -316,6 +324,7 @@ def record_to_entries(rec, now, source="PNCP", source_id="pncp"):
         "category_label": CAT_LABEL[cat],
         "tier": "T2",  # generate.py 的分级回填默认值，见文件头注释
         "tags": [],  # 标签由 generate.py 在内存里重算；写空列表只为阻止回填覆盖类别
+        "valor": _num(rec.get("valorTotalEstimado")),
     }
     draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
              "en_title": en_title, "en_oneliner": en_one}
@@ -424,6 +433,7 @@ def contract_to_entries(rec, now):
         "category_label": CAT_LABEL[cat],
         "tier": "T2",
         "tags": [],
+        "valor": _num(rec.get("valorGlobal") or rec.get("valorInicial")),
     }
     draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
              "en_title": en_title, "en_oneliner": en_one}
@@ -521,6 +531,7 @@ def ata_to_entries(rec, now):
         "category_label": CAT_LABEL[cat],
         "tier": "T2",
         "tags": [],
+        "valor": None,  # atas 接口无金额字段
     }
     draft = {"zh_title": zh_title, "zh_oneliner": zh_one,
              "en_title": en_title, "en_oneliner": en_one}

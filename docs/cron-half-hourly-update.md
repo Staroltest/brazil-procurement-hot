@@ -17,7 +17,7 @@
 每轮按顺序做：
 
 1. 同步草稿（防并行写丢数据）：用 `python3 ~/workspace/custom-connectors/custom.github-token/bin/api.py GET /repos/Staroltest/brazil-procurement-hot/contents/data/zh_draft.json` 拉远端 data/zh_draft.json，与本地字段级合并（按链接取并集；同字段冲突保留本地；en_title/en_oneliner 永不丢），写回本地（indent=1，ensure_ascii=False）。拉不到就跳过这步、用本地继续，不要停。
-2. 拉源 + 生成：先跑 `python3 tools/pncp_fetch.py`（退出码 3 = 一条都没拉到，停下来向主聊汇报；个别方式/页失败可容忍，日志里有数就行），再跑 `python3 tools/generate.py`；如果本轮是北京时间 06:00 那一轮，generate 加 `--daily` 出当日日报。
+2. 拉源 + 生成：先跑 `python3 tools/pncp_fetch.py`（退出码 3 = 一条都没拉到，停下来向主聊汇报；个别方式/页失败可容忍，日志里有数就行），再跑 `python3 tools/generate.py`；如果本轮是北京时间 06:00–06:59 窗口内的第一轮，generate 加 `--daily` 出当日日报。
 3. 抽查改写质量：从本轮新条目里抽 3 条，看 data/zh_draft.json 里的 zh_title/zh_oneliner/en_title/en_oneliner 是否通顺、金额格式是否为 R$ 1,234.56 国际格式、截止时间是否带「巴西利亚时间」标注；发现明显错误就字段级修正该条目后重新 generate。发现任何公开文件里出现 objetoCompra 原文片段，停下来向主聊汇报，不要推送。
 4. 自查：data/hot.json 的 counts 里 selected ≥ 1、hot ≥ 1、timeline ≥ 1（全为 0 是异常，汇报）；扫描 en/ 全树不得出现中文字符（CJK），en/data/hot.json 里 0 个 zh_* 键、data/hot.json 里 0 个 en_* 键；data/geo-audit.json 的 failed 必须为 0（mcp/mirror 两项 warn 是常态，不算问题）；中英各抽一页有 hreflang 三元组。
 5. 推送：跑 push_snapshot.py（message 用「巴西政府采购HOT YYYY-MM-DD HH:MM 更新」）。打印 no-change 就说明本轮无实质变化，跳过第 6 步。推送失败记到 ~/memory/YYYY-MM-DD.md，下一轮再推同样的内容，不要强行重试；连续两轮推不上去才向主聊汇报。

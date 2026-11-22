@@ -287,6 +287,8 @@
     ],
     "selected_hours": 720,
     "selected_min": 55,
+    "tiny_valor_max": 1000,
+    "tiny_valor_penalty": 15,
     "tier_bonus": {
       "T1": 10,
       "T2": 0,
