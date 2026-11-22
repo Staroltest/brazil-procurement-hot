@@ -2912,11 +2912,11 @@ def render_period(site, kind, report, base="", prev=None, next_=None, canonical=
     prev/next: (label, href) 或 None。base 是到站根的目录前缀。
     rel_path 默认 kind.html；存档页由调用方传显式值。"""
     if lang == "en":
-        labels = {"daily": ("Daily", "past 24 hours", "Today's picks"),
+        labels = {"daily": ("Daily", "past 48 hours", "Today's picks"),
                   "weekly": ("Weekly", "past 7 days", "This week's picks"),
                   "monthly": ("Monthly", "past 30 days", "This month's picks")}
     else:
-        labels = {"daily": ("日报", "过去 24 小时", "今日精选"),
+        labels = {"daily": ("日报", "过去 48 小时", "今日精选"),
                   "weekly": ("周报", "过去 7 天", "本周精选"),
                   "monthly": ("月报", "过去 30 天", "本月精选")}
     name, window, picked = labels[kind]
@@ -4774,7 +4774,7 @@ def main():
 
         # --- 日报（每天一份存档）
         last_24h = [it for it in live if (now - it["_pub"]) <= timedelta(hours=sc["daily_hours"])]
-        daily = build_period("daily", last_24h, "过去 24 小时")
+        daily = build_period("daily", last_24h, "过去 48 小时")
         save_json(os.path.join(data_dir, "daily.json"), daily)
         daily_data_dir = os.path.join(data_dir, "daily")
         os.makedirs(daily_data_dir, exist_ok=True)
@@ -4783,7 +4783,7 @@ def main():
         render_archived("daily", daily_reports, "daily")
         current_page("daily", daily, daily_reports, "daily")
         print(f"daily: {daily['date']}, {len(daily['items'])} items, 第 {daily['issue']} 期")
-        daily_en = build_period_en("daily", last_24h, "past 24 hours")
+        daily_en = build_period_en("daily", last_24h, "past 48 hours")
         save_json(os.path.join(en_data_dir, "daily.json"), daily_en)
         render_archived_en("daily", daily_reports, "daily", daily_en, True)
         current_page_en("daily", daily_en, daily_reports, "daily")
