@@ -66490,5 +66490,791 @@
   "zh_oneliner": "该机构的医疗卫生方面的物资或服务价格登记（Ata 000284）现行有效，有效期至 2027年11月17日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
   "en_title": "Fms - Fundo Municipal de Saude de Linhares Health & medical procurement · price registration ata 000284",
   "en_oneliner": "A price registration record (ata 000284) for healthcare goods or services published by the responsible body is currently in force until Nov 17, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/editais/01065846000172/2026/1087": {
+  "zh_title": "Goianésia（GO）工程与基建采购 · 电子竞价 · 12月7日截止 #53407",
+  "zh_oneliner": "Goianésia（GO）一公共机构以电子竞价方式采购工程、维修或基础设施方面的服务或物资，估算金额约 R$ 1,715,147.71，提案截止时间为 12月7日 08:30（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Goianésia (GO) Works & infrastructure procurement · electronic pregão (reverse auction) · closes Dec 7 #53407",
+  "en_oneliner": "A public buyer in Goianésia (GO) is procuring works, repairs or infrastructure services through electronic pregão (reverse auction), with an estimated value of about R$ 1,715,147.71; proposals close Dec 7, 08:30 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/27165620000137/2026/107": {
+  "zh_title": "Atílio Vivácqua（ES）交通与车辆采购 · 电子竞价 · 12月9日截止 #11",
+  "zh_oneliner": "Atílio Vivácqua（ES）一公共机构以电子竞价方式采购车辆、运输或相关设备与服务，估算金额约 R$ 177,016.24，提案截止时间为 12月9日 08:09（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Atílio Vivácqua (ES) Transport & vehicles procurement · electronic pregão (reverse auction) · closes Dec 9 #11",
+  "en_oneliner": "A public buyer in Atílio Vivácqua (ES) is procuring vehicles, transport or related equipment and services through electronic pregão (reverse auction), with an estimated value of about R$ 177,016.24; proposals close Dec 9, 08:09 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/92411974000186/2026/129": {
+  "zh_title": "Nicolau Vergueiro（RS）交通与车辆采购 · 电子竞价 · 11月23日截止 #12",
+  "zh_oneliner": "Nicolau Vergueiro（RS）一公共机构以电子竞价方式采购车辆、运输或相关设备与服务，估算金额约 R$ 236,060，提案截止时间为 11月23日 09:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Nicolau Vergueiro (RS) Transport & vehicles procurement · electronic pregão (reverse auction) · closes Nov 23 #12",
+  "en_oneliner": "A public buyer in Nicolau Vergueiro (RS) is procuring vehicles, transport or related equipment and services through electronic pregão (reverse auction), with an estimated value of about R$ 236,060; proposals close Nov 23, 09:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/89971758000180/2026/1483": {
+  "zh_title": "São Miguel das Missões（RS）信息技术采购 · 电子竞价 · 12月21日截止 #115",
+  "zh_oneliner": "São Miguel das Missões（RS）一公共机构以电子竞价方式采购信息技术设备、系统或服务，估算金额约 R$ 111,673.28，提案截止时间为 12月21日 09:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "São Miguel das Missões (RS) IT procurement · electronic pregão (reverse auction) · closes Dec 21 #115",
+  "en_oneliner": "A public buyer in São Miguel das Missões (RS) is procuring IT equipment, systems or services through electronic pregão (reverse auction), with an estimated value of about R$ 111,673.28; proposals close Dec 21, 09:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/08749525000136/2026/33": {
+  "zh_title": "Taperoá（PB）物资与设备采购 · 电子竞价 · 12月7日截止 #24",
+  "zh_oneliner": "Taperoá（PB）一公共机构以电子竞价方式采购物资、设备或耗材，提案截止时间为 12月7日 08:59（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Taperoá (PB) Supplies & equipment procurement · electronic pregão (reverse auction) · closes Dec 7 #24",
+  "en_oneliner": "A public buyer in Taperoá (PB) is procuring supplies, equipment or consumables through electronic pregão (reverse auction); proposals close Dec 7, 08:59 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/13830336000123/2026/231": {
+  "zh_title": "Candeias（BA）食品与餐饮采购 · 电子竞价 · 12月3日截止 #090",
+  "zh_oneliner": "Candeias（BA）一公共机构以电子竞价方式采购食品、餐饮或相关物资，估算金额约 R$ 2,466,091.35，提案截止时间为 12月3日 09:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Candeias (BA) Food & catering procurement · electronic pregão (reverse auction) · closes Dec 3 #090",
+  "en_oneliner": "A public buyer in Candeias (BA) is procuring food, catering or related supplies through electronic pregão (reverse auction), with an estimated value of about R$ 2,466,091.35; proposals close Dec 3, 09:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/12213549000143/2026/6": {
+  "zh_title": "Aruanã（GO）医疗卫生采购 · 电子竞价 · 12月2日截止 #(9424) | 31-0",
+  "zh_oneliner": "Aruanã（GO）一公共机构以电子竞价方式采购医疗卫生方面的物资或服务，估算金额约 R$ 4,376,409.52，提案截止时间为 12月2日 09:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Aruanã (GO) Health & medical procurement · electronic pregão (reverse auction) · closes Dec 2 #(9424) | 31-0",
+  "en_oneliner": "A public buyer in Aruanã (GO) is procuring healthcare goods or services through electronic pregão (reverse auction), with an estimated value of about R$ 4,376,409.52; proposals close Dec 2, 09:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/76205665000101/2026/341": {
+  "zh_title": "Marmeleiro（PR）工程与基建采购 · 电子竞价 · 12月9日截止 #PCE 98",
+  "zh_oneliner": "Marmeleiro（PR）一公共机构以电子竞价方式采购工程、维修或基础设施方面的服务或物资，估算金额约 R$ 515,849，提案截止时间为 12月9日 08:30（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Marmeleiro (PR) Works & infrastructure procurement · electronic pregão (reverse auction) · closes Dec 9 #PCE 98",
+  "en_oneliner": "A public buyer in Marmeleiro (PR) is procuring works, repairs or infrastructure services through electronic pregão (reverse auction), with an estimated value of about R$ 515,849; proposals close Dec 9, 08:30 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/46195079000154/2026/1153": {
+  "zh_title": "Jaú（SP）医疗卫生采购 · 电子竞价 · 12月4日截止 #186",
+  "zh_oneliner": "Jaú（SP）一公共机构以电子竞价方式采购医疗卫生方面的物资或服务，估算金额约 R$ 28,154.68，提案截止时间为 12月4日 08:29（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Jaú (SP) Health & medical procurement · electronic pregão (reverse auction) · closes Dec 4 #186",
+  "en_oneliner": "A public buyer in Jaú (SP) is procuring healthcare goods or services through electronic pregão (reverse auction), with an estimated value of about R$ 28,154.68; proposals close Dec 4, 08:29 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/88594999000195/2026/1811": {
+  "zh_title": "Garibaldi（RS）综合服务采购 · 电子竞价 · 12月7日截止 #116",
+  "zh_oneliner": "Garibaldi（RS）一公共机构以电子竞价方式采购专业服务或外包服务，估算金额约 R$ 601,545，提案截止时间为 12月7日 08:29（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Garibaldi (RS) Services procurement · electronic pregão (reverse auction) · closes Dec 7 #116",
+  "en_oneliner": "A public buyer in Garibaldi (RS) is procuring professional or outsourced services through electronic pregão (reverse auction), with an estimated value of about R$ 601,545; proposals close Dec 7, 08:29 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/76167725000130/2026/27": {
+  "zh_title": "Curiúva（PR）医疗卫生采购 · 电子竞价 · 12月4日截止 #20",
+  "zh_oneliner": "Curiúva（PR）一公共机构以电子竞价方式采购医疗卫生方面的物资或服务，估算金额约 R$ 487,046.76，提案截止时间为 12月4日 08:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Curiúva (PR) Health & medical procurement · electronic pregão (reverse auction) · closes Dec 4 #20",
+  "en_oneliner": "A public buyer in Curiúva (PR) is procuring healthcare goods or services through electronic pregão (reverse auction), with an estimated value of about R$ 487,046.76; proposals close Dec 4, 08:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/01612489000115/2026/113": {
+  "zh_title": "Chapada Gaúcha（MG）医疗卫生采购 · 电子竞争性招标 · 12月7日截止 #0012",
+  "zh_oneliner": "Chapada Gaúcha（MG）一公共机构以电子竞争性招标方式采购医疗卫生方面的物资或服务，估算金额约 R$ 247,196.97，提案截止时间为 12月7日 08:30（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Chapada Gaúcha (MG) Health & medical procurement · electronic competitive bidding (concorrência) · closes Dec 7 #0012",
+  "en_oneliner": "A public buyer in Chapada Gaúcha (MG) is procuring healthcare goods or services through electronic competitive bidding (concorrência), with an estimated value of about R$ 247,196.97; proposals close Dec 7, 08:30 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/18128272000137/2026/139": {
+  "zh_title": "Brás Pires（MG）教育采购 · 电子竞争性招标 · 12月8日截止 #008",
+  "zh_oneliner": "Brás Pires（MG）一公共机构以电子竞争性招标方式采购教育方面的物资或服务，估算金额约 R$ 164,355.71，提案截止时间为 12月8日 07:59（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Brás Pires (MG) Education procurement · electronic competitive bidding (concorrência) · closes Dec 8 #008",
+  "en_oneliner": "A public buyer in Brás Pires (MG) is procuring education-related goods or services through electronic competitive bidding (concorrência), with an estimated value of about R$ 164,355.71; proposals close Dec 8, 07:59 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/13831441000187/2026/111": {
+  "zh_title": "São Sebastião do Passé（BA）工程与基建采购 · 电子竞争性招标 · 12月17日截止 #007",
+  "zh_oneliner": "São Sebastião do Passé（BA）一公共机构以电子竞争性招标方式采购工程、维修或基础设施方面的服务或物资，估算金额约 R$ 331,559.79，提案截止时间为 12月17日 10:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "São Sebastião do Passé (BA) Works & infrastructure procurement · electronic competitive bidding (concorrência) · closes Dec 17 #007",
+  "en_oneliner": "A public buyer in São Sebastião do Passé (BA) is procuring works, repairs or infrastructure services through electronic competitive bidding (concorrência), with an estimated value of about R$ 331,559.79; proposals close Dec 17, 10:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/13831441000187/2026/112": {
+  "zh_title": "São Sebastião do Passé（BA）工程与基建采购 · 电子竞争性招标 · 1月6日截止 #008",
+  "zh_oneliner": "São Sebastião do Passé（BA）一公共机构以电子竞争性招标方式采购工程、维修或基础设施方面的服务或物资，提案截止时间为 1月6日 10:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "São Sebastião do Passé (BA) Works & infrastructure procurement · electronic competitive bidding (concorrência) · closes Jan 6 #008",
+  "en_oneliner": "A public buyer in São Sebastião do Passé (BA) is procuring works, repairs or infrastructure services through electronic competitive bidding (concorrência); proposals close Jan 6, 10:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/16958425000148/2026/494": {
+  "zh_title": "Rio Branco（AC）医疗卫生采购 · 电子竞争性招标 · 12月9日截止 #189",
+  "zh_oneliner": "Rio Branco（AC）一公共机构以电子竞争性招标方式采购医疗卫生方面的物资或服务，估算金额约 R$ 4,451,385.65，提案截止时间为 12月9日 09:15（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Rio Branco (AC) Health & medical procurement · electronic competitive bidding (concorrência) · closes Dec 9 #189",
+  "en_oneliner": "A public buyer in Rio Branco (AC) is procuring healthcare goods or services through electronic competitive bidding (concorrência), with an estimated value of about R$ 4,451,385.65; proposals close Dec 9, 09:15 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/07954605000160/2026/1156": {
+  "zh_title": "Fortaleza（CE）工程与基建采购 · 电子竞争性招标 · 1月15日截止 #126",
+  "zh_oneliner": "Fortaleza（CE）一公共机构以电子竞争性招标方式采购工程、维修或基础设施方面的服务或物资，估算金额约 R$ 1,864,345.86，提案截止时间为 1月15日 09:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Fortaleza (CE) Works & infrastructure procurement · electronic competitive bidding (concorrência) · closes Jan 15 #126",
+  "en_oneliner": "A public buyer in Fortaleza (CE) is procuring works, repairs or infrastructure services through electronic competitive bidding (concorrência), with an estimated value of about R$ 1,864,345.86; proposals close Jan 15, 09:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/09084815000170/2026/97": {
+  "zh_title": "Patos（PB）医疗卫生采购 · 电子竞争性招标 · 12月15日截止 #003",
+  "zh_oneliner": "Patos（PB）一公共机构以电子竞争性招标方式采购医疗卫生方面的物资或服务，估算金额约 R$ 2,116,601.31，提案截止时间为 12月15日 10:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Patos (PB) Health & medical procurement · electronic competitive bidding (concorrência) · closes Dec 15 #003",
+  "en_oneliner": "A public buyer in Patos (PB) is procuring healthcare goods or services through electronic competitive bidding (concorrência), with an estimated value of about R$ 2,116,601.31; proposals close Dec 15, 10:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/07954605000160/2026/1157": {
+  "zh_title": "Fortaleza（CE）教育采购 · 电子竞争性招标 · 12月8日截止 #130",
+  "zh_oneliner": "Fortaleza（CE）一公共机构以电子竞争性招标方式采购教育方面的物资或服务，估算金额约 R$ 16,761,933.53，提案截止时间为 12月8日 09:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Fortaleza (CE) Education procurement · electronic competitive bidding (concorrência) · closes Dec 8 #130",
+  "en_oneliner": "A public buyer in Fortaleza (CE) is procuring education-related goods or services through electronic competitive bidding (concorrência), with an estimated value of about R$ 16,761,933.53; proposals close Dec 8, 09:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/76276849000154/2026/444": {
+  "zh_title": "Florianópolis（SC）物资与设备采购 · 免招标直接采购 #MP-249",
+  "zh_oneliner": "Florianópolis（SC）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 6,905，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Florianópolis (SC) Supplies & equipment procurement · direct award (dispensa) #MP-249",
+  "en_oneliner": "A public buyer in Florianópolis (SC) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 6,905, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/46172888000140/2026/461": {
+  "zh_title": "Barra Bonita（SP）综合服务采购 · 免招标直接采购 #00251",
+  "zh_oneliner": "Barra Bonita（SP）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 5,005，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Barra Bonita (SP) Services procurement · direct award (dispensa) #00251",
+  "en_oneliner": "A public buyer in Barra Bonita (SP) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 5,005, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/08923971000115/2026/121": {
+  "zh_title": "Cajazeiras（PB）综合服务采购 · 免招标直接采购 · 12月1日截止 #129",
+  "zh_oneliner": "Cajazeiras（PB）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 60,000，提案截止时间为 12月1日 08:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Cajazeiras (PB) Services procurement · direct award (dispensa) · closes Dec 1 #129",
+  "en_oneliner": "A public buyer in Cajazeiras (PB) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 60,000; proposals close Dec 1, 08:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/12998458000160/2026/1729": {
+  "zh_title": "São José dos Campos（SP）物资与设备采购 · 免招标直接采购 #3775",
+  "zh_oneliner": "São José dos Campos（SP）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 6,108，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "São José dos Campos (SP) Supplies & equipment procurement · direct award (dispensa) #3775",
+  "en_oneliner": "A public buyer in São José dos Campos (SP) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 6,108, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/45400604000163/2026/29": {
+  "zh_title": "Araçu（GO）医疗卫生采购 · 免招标直接采购 #(9033) | 39-0",
+  "zh_oneliner": "Araçu（GO）一公共机构以免招标直接采购方式采购医疗卫生方面的物资或服务，估算金额约 R$ 57,000，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Araçu (GO) Health & medical procurement · direct award (dispensa) #(9033) | 39-0",
+  "en_oneliner": "A public buyer in Araçu (GO) is procuring healthcare goods or services through direct award (dispensa), with an estimated value of about R$ 57,000, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/88594999000195/2026/1810": {
+  "zh_title": "Garibaldi（RS）物资与设备采购 · 免招标直接采购 #1431",
+  "zh_oneliner": "Garibaldi（RS）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 699，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Garibaldi (RS) Supplies & equipment procurement · direct award (dispensa) #1431",
+  "en_oneliner": "A public buyer in Garibaldi (RS) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 699, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/92963776000125/2026/29": {
+  "zh_title": "Porto Alegre（RS）综合服务采购 · 免招标直接采购 · 11月27日截止 #32",
+  "zh_oneliner": "Porto Alegre（RS）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 4,076.16，提案截止时间为 11月27日 09:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Porto Alegre (RS) Services procurement · direct award (dispensa) · closes Nov 27 #32",
+  "en_oneliner": "A public buyer in Porto Alegre (RS) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 4,076.16; proposals close Nov 27, 09:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/91618439000138/2026/1282": {
+  "zh_title": "Nova Prata（RS）交通与车辆采购 · 免招标直接采购 #1033",
+  "zh_oneliner": "Nova Prata（RS）一公共机构以免招标直接采购方式采购车辆、运输或相关设备与服务，估算金额约 R$ 80，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Nova Prata (RS) Transport & vehicles procurement · direct award (dispensa) #1033",
+  "en_oneliner": "A public buyer in Nova Prata (RS) is procuring vehicles, transport or related equipment and services through direct award (dispensa), with an estimated value of about R$ 80, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/00394502000144/2026/17217": {
+  "zh_title": "Natal（RN）物资与设备采购 · 免招标直接采购 · 11月27日截止 #66",
+  "zh_oneliner": "Natal（RN）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 65,000，提案截止时间为 11月27日 08:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Natal (RN) Supplies & equipment procurement · direct award (dispensa) · closes Nov 27 #66",
+  "en_oneliner": "A public buyer in Natal (RN) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 65,000; proposals close Nov 27, 08:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/00091652000189/2026/673": {
+  "zh_title": "Teresina（PI）综合服务采购 · 免招标直接采购 #15",
+  "zh_oneliner": "Teresina（PI）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 1,830，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Teresina (PI) Services procurement · direct award (dispensa) #15",
+  "en_oneliner": "A public buyer in Teresina (PI) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 1,830, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/11416366000162/2026/145": {
+  "zh_title": "Morrinhos（GO）综合服务采购 · 免招标直接采购 #111647",
+  "zh_oneliner": "Morrinhos（GO）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 981.25，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Morrinhos (GO) Services procurement · direct award (dispensa) #111647",
+  "en_oneliner": "A public buyer in Morrinhos (GO) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 981.25, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/07252009000139/2026/9": {
+  "zh_title": "Balneário Camboriú（SC）物资与设备采购 · 免招标直接采购 #008 - DL",
+  "zh_oneliner": "Balneário Camboriú（SC）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 24,716.16，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Balneário Camboriú (SC) Supplies & equipment procurement · direct award (dispensa) #008 - DL",
+  "en_oneliner": "A public buyer in Balneário Camboriú (SC) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 24,716.16, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/07722779000106/2026/156": {
+  "zh_title": "Santo André（SP）综合服务采购 · 免招标直接采购 #462",
+  "zh_oneliner": "Santo André（SP）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 203,260，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Santo André (SP) Services procurement · direct award (dispensa) #462",
+  "en_oneliner": "A public buyer in Santo André (SP) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 203,260, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/45226214000119/2026/510": {
+  "zh_title": "Pindamonhangaba（SP）物资与设备采购 · 免招标直接采购 · 11月27日截止 #227",
+  "zh_oneliner": "Pindamonhangaba（SP）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 2,835，提案截止时间为 11月27日 08:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Pindamonhangaba (SP) Supplies & equipment procurement · direct award (dispensa) · closes Nov 27 #227",
+  "en_oneliner": "A public buyer in Pindamonhangaba (SP) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 2,835; proposals close Nov 27, 08:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/46200846000176/2026/11561": {
+  "zh_title": "Lençóis Paulista（SP）交通与车辆采购 · 免招标直接采购 #12036",
+  "zh_oneliner": "Lençóis Paulista（SP）一公共机构以免招标直接采购方式采购车辆、运输或相关设备与服务，估算金额约 R$ 2,200，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Lençóis Paulista (SP) Transport & vehicles procurement · direct award (dispensa) #12036",
+  "en_oneliner": "A public buyer in Lençóis Paulista (SP) is procuring vehicles, transport or related equipment and services through direct award (dispensa), with an estimated value of about R$ 2,200, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/07975391000109/2026/54": {
+  "zh_title": "Conselheiro Lafaiete（MG）信息技术采购 · 免招标直接采购 #DP038.2026",
+  "zh_oneliner": "Conselheiro Lafaiete（MG）一公共机构以免招标直接采购方式采购信息技术设备、系统或服务，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Conselheiro Lafaiete (MG) IT procurement · direct award (dispensa) #DP038.2026",
+  "en_oneliner": "A public buyer in Conselheiro Lafaiete (MG) is procuring IT equipment, systems or services through direct award (dispensa), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/01456013000132/2026/24": {
+  "zh_title": "Morro da Fumaça（SC）食品与餐饮采购 · 免招标直接采购 · 11月26日截止 #7",
+  "zh_oneliner": "Morro da Fumaça（SC）一公共机构以免招标直接采购方式采购食品、餐饮或相关物资，估算金额约 R$ 7,250，提案截止时间为 11月26日 08:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Morro da Fumaça (SC) Food & catering procurement · direct award (dispensa) · closes Nov 26 #7",
+  "en_oneliner": "A public buyer in Morro da Fumaça (SC) is procuring food, catering or related supplies through direct award (dispensa), with an estimated value of about R$ 7,250; proposals close Nov 26, 08:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/02215275000178/2026/1164": {
+  "zh_title": "Minaçu（GO）综合服务采购 · 免招标直接采购 · 12月11日截止 #14520",
+  "zh_oneliner": "Minaçu（GO）一公共机构以免招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 160，提案截止时间为 12月11日 09:45（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Minaçu (GO) Services procurement · direct award (dispensa) · closes Dec 11 #14520",
+  "en_oneliner": "A public buyer in Minaçu (GO) is procuring professional or outsourced services through direct award (dispensa), with an estimated value of about R$ 160; proposals close Dec 11, 09:45 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/00394452000103/2026/24989": {
+  "zh_title": "Itaqui（RS）物资与设备采购 · 免招标直接采购 #116",
+  "zh_oneliner": "Itaqui（RS）一公共机构以免招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 1,892，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Itaqui (RS) Supplies & equipment procurement · direct award (dispensa) #116",
+  "en_oneliner": "A public buyer in Itaqui (RS) is procuring supplies, equipment or consumables through direct award (dispensa), with an estimated value of about R$ 1,892, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/70946009000175/2026/461": {
+  "zh_title": "São Roque（SP）交通与车辆采购 · 免招标直接采购 #541",
+  "zh_oneliner": "São Roque（SP）一公共机构以免招标直接采购方式采购车辆、运输或相关设备与服务，估算金额约 R$ 2,397.68，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "São Roque (SP) Transport & vehicles procurement · direct award (dispensa) #541",
+  "en_oneliner": "A public buyer in São Roque (SP) is procuring vehicles, transport or related equipment and services through direct award (dispensa), with an estimated value of about R$ 2,397.68, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/34921759000129/2026/98": {
+  "zh_title": "Belém（PA）综合服务采购 · 不经招标直接采购 #3713254",
+  "zh_oneliner": "Belém（PA）一公共机构以不经招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 300，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Belém (PA) Services procurement · direct award (inexigibilidade) #3713254",
+  "en_oneliner": "A public buyer in Belém (PA) is procuring professional or outsourced services through direct award (inexigibilidade), with an estimated value of about R$ 300, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/11508942000100/2026/5542": {
+  "zh_title": "Recife（PE）综合服务采购 · 不经招标直接采购 #6201.5564",
+  "zh_oneliner": "Recife（PE）一公共机构以不经招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 1,920，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Recife (PE) Services procurement · direct award (inexigibilidade) #6201.5564",
+  "en_oneliner": "A public buyer in Recife (PE) is procuring professional or outsourced services through direct award (inexigibilidade), with an estimated value of about R$ 1,920, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/00457468000100/2026/20": {
+  "zh_title": "Areias（SP）物资与设备采购 · 不经招标直接采购 #IL 13",
+  "zh_oneliner": "Areias（SP）一公共机构以不经招标直接采购方式采购物资、设备或耗材，估算金额约 R$ 455.31，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Areias (SP) Supplies & equipment procurement · direct award (inexigibilidade) #IL 13",
+  "en_oneliner": "A public buyer in Areias (SP) is procuring supplies, equipment or consumables through direct award (inexigibilidade), with an estimated value of about R$ 455.31, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/76208495000100/2026/266": {
+  "zh_title": "Formosa do Oeste（PR）综合服务采购 · 不经招标直接采购 #11732",
+  "zh_oneliner": "Formosa do Oeste（PR）一公共机构以不经招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 1,050，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Formosa do Oeste (PR) Services procurement · direct award (inexigibilidade) #11732",
+  "en_oneliner": "A public buyer in Formosa do Oeste (PR) is procuring professional or outsourced services through direct award (inexigibilidade), with an estimated value of about R$ 1,050, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/00394452000103/2026/24990": {
+  "zh_title": "Macapá（AP）综合服务采购 · 不经招标直接采购 #11736",
+  "zh_oneliner": "Macapá（AP）一公共机构以不经招标直接采购方式采购专业服务或外包服务，估算金额约 R$ 4,979.90，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Macapá (AP) Services procurement · direct award (inexigibilidade) #11736",
+  "en_oneliner": "A public buyer in Macapá (AP) is procuring professional or outsourced services through direct award (inexigibilidade), with an estimated value of about R$ 4,979.90, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/88142302000145/2026/444": {
+  "zh_title": "Caçapava do Sul（RS）医疗卫生采购 · 不经招标直接采购 #150",
+  "zh_oneliner": "Caçapava do Sul（RS）一公共机构以不经招标直接采购方式采购医疗卫生方面的物资或服务，估算金额约 R$ 12,000，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Caçapava do Sul (RS) Health & medical procurement · direct award (inexigibilidade) #150",
+  "en_oneliner": "A public buyer in Caçapava do Sul (RS) is procuring healthcare goods or services through direct award (inexigibilidade), with an estimated value of about R$ 12,000, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/00394494000136/2026/1389": {
+  "zh_title": "Brasília（DF）教育采购 · 不经招标直接采购 #19",
+  "zh_oneliner": "Brasília（DF）一公共机构以不经招标直接采购方式采购教育方面的物资或服务，估算金额约 R$ 4,290，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Brasília (DF) Education procurement · direct award (inexigibilidade) #19",
+  "en_oneliner": "A public buyer in Brasília (DF) is procuring education-related goods or services through direct award (inexigibilidade), with an estimated value of about R$ 4,290, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/30051023000196/2026/246": {
+  "zh_title": "Rio de Janeiro（RJ）工程与基建采购 · 不经招标直接采购 #501",
+  "zh_oneliner": "Rio de Janeiro（RJ）一公共机构以不经招标直接采购方式采购工程、维修或基础设施方面的服务或物资，估算金额约 R$ 375,122.68，有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Rio de Janeiro (RJ) Works & infrastructure procurement · direct award (inexigibilidade) #501",
+  "en_oneliner": "A public buyer in Rio de Janeiro (RJ) is procuring works, repairs or infrastructure services through direct award (inexigibilidade), with an estimated value of about R$ 375,122.68, so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/09528346000131/2026/49": {
+  "zh_title": "Itaperuna（RJ）医疗卫生采购 · 资格登记 · 12月16日截止 #001",
+  "zh_oneliner": "Itaperuna（RJ）一公共机构以资格登记方式采购医疗卫生方面的物资或服务，提案截止时间为 12月16日 17:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Itaperuna (RJ) Health & medical procurement · accreditation (credenciamento) · closes Dec 16 #001",
+  "en_oneliner": "A public buyer in Itaperuna (RJ) is procuring healthcare goods or services through accreditation (credenciamento); proposals close Dec 16, 17:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/01800465000190/2026/181": {
+  "zh_title": "Estrela do Norte（GO）交通与车辆采购 · 现场竞价 · 12月7日截止 #(7216) | 12-0",
+  "zh_oneliner": "Estrela do Norte（GO）一公共机构以现场竞价方式采购车辆、运输或相关设备与服务，估算金额约 R$ 773,841.19，提案截止时间为 12月7日 08:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Estrela do Norte (GO) Transport & vehicles procurement · in-person pregão (reverse auction) · closes Dec 7 #(7216) | 12-0",
+  "en_oneliner": "A public buyer in Estrela do Norte (GO) is procuring vehicles, transport or related equipment and services through in-person pregão (reverse auction), with an estimated value of about R$ 773,841.19; proposals close Dec 7, 08:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/44498988000136/2026/46": {
+  "zh_title": "Bocaina（SP）工程与基建采购 · 现场竞争性招标 · 12月2日截止 #3",
+  "zh_oneliner": "Bocaina（SP）一公共机构以现场竞争性招标方式采购工程、维修或基础设施方面的服务或物资，估算金额约 R$ 464,626.74，提案截止时间为 12月2日 23:59（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Bocaina (SP) Works & infrastructure procurement · in-person competitive bidding (concorrência) · closes Dec 2 #3",
+  "en_oneliner": "A public buyer in Bocaina (SP) is procuring works, repairs or infrastructure services through in-person competitive bidding (concorrência), with an estimated value of about R$ 464,626.74; proposals close Dec 2, 23:59 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/editais/04059671000189/2026/16": {
+  "zh_title": "Mâncio Lima（AC）工程与基建采购 · 现场竞争性招标 · 12月9日截止 #12",
+  "zh_oneliner": "Mâncio Lima（AC）一公共机构以现场竞争性招标方式采购工程、维修或基础设施方面的服务或物资，估算金额约 R$ 680,285.95，提案截止时间为 12月9日 11:00（巴西利亚时间），有意参与的中小企业请尽早到 PNCP 官方公告页核对资格与文件要求。",
+  "en_title": "Mâncio Lima (AC) Works & infrastructure procurement · in-person competitive bidding (concorrência) · closes Dec 9 #12",
+  "en_oneliner": "A public buyer in Mâncio Lima (AC) is procuring works, repairs or infrastructure services through in-person competitive bidding (concorrência), with an estimated value of about R$ 680,285.95; proposals close Dec 9, 11:00 (Brasília time), so interested SMEs should check the eligibility and document requirements on the official PNCP notice page early."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3140": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #10565-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Triunfal Marilia Comercial Limitada，合同金额约 R$ 144，签约于 2026年8月17日，有效期至 2026年8月17日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #10565-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Triunfal Marilia Comercial Limitada, with a contract value of about R$ 144; signed Aug 17, 2026, in force until Aug 17, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3141": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #10676-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Cristalia Produtos Quimicos Farmaceuticos LTDA，合同金额约 R$ 834，签约于 2026年8月19日，有效期至 2026年8月19日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #10676-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Cristalia Produtos Quimicos Farmaceuticos LTDA, with a contract value of about R$ 834; signed Aug 19, 2026, in force until Aug 19, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3142": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #10715-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Aglon Comércio e Representações LTDA，合同金额约 R$ 12,768，签约于 2026年8月19日，有效期至 2026年8月19日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #10715-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Aglon Comércio e Representações LTDA, with a contract value of about R$ 12,768; signed Aug 19, 2026, in force until Aug 19, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3143": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12080-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Top Norte Comercio de Material Medico Hospitalar LTDA，合同金额约 R$ 312，签约于 2026年9月24日，有效期至 2026年9月24日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12080-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Top Norte Comercio de Material Medico Hospitalar LTDA, with a contract value of about R$ 312; signed Sep 24, 2026, in force until Sep 24, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3144": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12081-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Centermedi Comercio de Produtos Hospitalares LTDA，合同金额约 R$ 630，签约于 2026年9月24日，有效期至 2026年9月24日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12081-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Centermedi Comercio de Produtos Hospitalares LTDA, with a contract value of about R$ 630; signed Sep 24, 2026, in force until Sep 24, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3145": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12082-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Cristalia Produtos Quimicos Farmaceuticos LTDA，合同金额约 R$ 2,224，签约于 2026年9月24日，有效期至 2026年9月24日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12082-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Cristalia Produtos Quimicos Farmaceuticos LTDA, with a contract value of about R$ 2,224; signed Sep 24, 2026, in force until Sep 24, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3146": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12141-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Avaremed Distribuidora de Medicamentos Eirelli，合同金额约 R$ 8,488，签约于 2026年9月24日，有效期至 2026年9月24日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12141-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Avaremed Distribuidora de Medicamentos Eirelli, with a contract value of about R$ 8,488; signed Sep 24, 2026, in force until Sep 24, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3147": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12242-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Octo Farmaco LTDA，合同金额约 R$ 181.80，签约于 2026年9月28日，有效期至 2026年9月28日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12242-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Octo Farmaco LTDA, with a contract value of about R$ 181.80; signed Sep 28, 2026, in force until Sep 28, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3148": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12295-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Ativa Comercial Hospitalar LTDA，合同金额约 R$ 8,202.90，签约于 2026年9月28日，有效期至 2026年9月28日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12295-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Ativa Comercial Hospitalar LTDA, with a contract value of about R$ 8,202.90; signed Sep 28, 2026, in force until Sep 28, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3149": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12296-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Drogafonte LTDA，合同金额约 R$ 1,170，签约于 2026年9月28日，有效期至 2026年9月28日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12296-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Drogafonte LTDA, with a contract value of about R$ 1,170; signed Sep 28, 2026, in force until Sep 28, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/50793660000145/2026/246": {
+  "zh_title": "Itu（SP）物资与设备采购 · 合同已签 #484",
+  "zh_oneliner": "Itu（SP）一公共机构已就物资、设备或耗材签订合同，供应商为 World Cam Brasil Eletroeletronico LTDA，合同金额约 R$ 7,156.35，签约于 2026年11月10日，有效期至 2026年11月10日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Itu (SP) Supplies & equipment procurement · signed contract #484",
+  "en_oneliner": "A public buyer in Itu (SP) has signed a contract for supplies, equipment or consumables, awarded to World Cam Brasil Eletroeletronico LTDA, with a contract value of about R$ 7,156.35; signed Nov 10, 2026, in force until Nov 10, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3150": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12299-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Drogafonte LTDA，合同金额约 R$ 5,670，签约于 2026年9月29日，有效期至 2026年9月29日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12299-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Drogafonte LTDA, with a contract value of about R$ 5,670; signed Sep 29, 2026, in force until Sep 29, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3151": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12300-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Conquista Distribuidora de Medicamentos e Produtos Hospitalares EIRELI，合同金额约 R$ 185.40，签约于 2026年9月29日，有效期至 2026年9月29日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12300-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Conquista Distribuidora de Medicamentos e Produtos Hospitalares EIRELI, with a contract value of about R$ 185.40; signed Sep 29, 2026, in force until Sep 29, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3152": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12301-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Centermedi Comercio de Produtos Hospitalares LTDA，合同金额约 R$ 1,600，签约于 2026年9月29日，有效期至 2026年9月29日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12301-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Centermedi Comercio de Produtos Hospitalares LTDA, with a contract value of about R$ 1,600; signed Sep 29, 2026, in force until Sep 29, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3153": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12302-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Ama Comercio de Alimentos LTDA，合同金额约 R$ 792，签约于 2026年9月29日，有效期至 2026年9月29日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12302-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Ama Comercio de Alimentos LTDA, with a contract value of about R$ 792; signed Sep 29, 2026, in force until Sep 29, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3154": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12303-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 R.a.p. Aparecida Comércio de Medicamentos LTDA，合同金额约 R$ 395.20，签约于 2026年9月29日，有效期至 2026年9月29日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12303-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to R.a.p. Aparecida Comércio de Medicamentos LTDA, with a contract value of about R$ 395.20; signed Sep 29, 2026, in force until Sep 29, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/88594999000195/2026/676": {
+  "zh_title": "Garibaldi（RS）综合服务采购 · 合同已签 #146",
+  "zh_oneliner": "Garibaldi（RS）一公共机构已就专业服务或外包服务签订合同，供应商为 Squadros Reformas e Construções LTDA，合同金额约 R$ 130,000，签约于 2026年7月3日，有效期至 2027年9月28日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Garibaldi (RS) Services procurement · signed contract #146",
+  "en_oneliner": "A public buyer in Garibaldi (RS) has signed a contract for professional or outsourced services, awarded to Squadros Reformas e Construções LTDA, with a contract value of about R$ 130,000; signed Jul 3, 2026, in force until Sep 28, 2027. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3155": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12712-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Promefarma Medicamentos e Produtos Hospitalares LTDA，合同金额约 R$ 135.60，签约于 2026年9月30日，有效期至 2026年9月30日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12712-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Promefarma Medicamentos e Produtos Hospitalares LTDA, with a contract value of about R$ 135.60; signed Sep 30, 2026, in force until Sep 30, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3156": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12713-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Fragnari Distribuidora de Medicamentos LTDA，合同金额约 R$ 1,980，签约于 2026年9月30日，有效期至 2026年9月30日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12713-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Fragnari Distribuidora de Medicamentos LTDA, with a contract value of about R$ 1,980; signed Sep 30, 2026, in force until Sep 30, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3157": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12714-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Triunfal Marilia Comercial Limitada，合同金额约 R$ 48，签约于 2026年9月30日，有效期至 2026年9月30日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12714-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Triunfal Marilia Comercial Limitada, with a contract value of about R$ 48; signed Sep 30, 2026, in force until Sep 30, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3158": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #12715-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 R.a.p. Aparecida Comércio de Medicamentos LTDA，合同金额约 R$ 33，签约于 2026年9月30日，有效期至 2026年9月30日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #12715-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to R.a.p. Aparecida Comércio de Medicamentos LTDA, with a contract value of about R$ 33; signed Sep 30, 2026, in force until Sep 30, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3159": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13161-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Conquista Distribuidora de Medicamentos e Produtos Hospitalares EIRELI，合同金额约 R$ 370.80，签约于 2026年10月15日，有效期至 2026年10月15日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13161-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Conquista Distribuidora de Medicamentos e Produtos Hospitalares EIRELI, with a contract value of about R$ 370.80; signed Oct 15, 2026, in force until Oct 15, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3160": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13203-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Promefarma Medicamentos e Produtos Hospitalares LTDA，合同金额约 R$ 135.60，签约于 2026年10月15日，有效期至 2026年10月15日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13203-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Promefarma Medicamentos e Produtos Hospitalares LTDA, with a contract value of about R$ 135.60; signed Oct 15, 2026, in force until Oct 15, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3161": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13204-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Fragnari Distribuidora de Medicamentos LTDA，合同金额约 R$ 1,980，签约于 2026年10月15日，有效期至 2026年10月15日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13204-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Fragnari Distribuidora de Medicamentos LTDA, with a contract value of about R$ 1,980; signed Oct 15, 2026, in force until Oct 15, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3162": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13217-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Lm Produtos Hospitalares LTDA，合同金额约 R$ 1,184，签约于 2026年10月15日，有效期至 2026年10月15日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13217-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Lm Produtos Hospitalares LTDA, with a contract value of about R$ 1,184; signed Oct 15, 2026, in force until Oct 15, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3163": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13218-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Aglon Comércio e Representações LTDA，合同金额约 R$ 15,984，签约于 2026年10月15日，有效期至 2026年10月15日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13218-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Aglon Comércio e Representações LTDA, with a contract value of about R$ 15,984; signed Oct 15, 2026, in force until Oct 15, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3164": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13219-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Kadfar Medicamentos LTDA，合同金额约 R$ 200，签约于 2026年10月15日，有效期至 2026年10月15日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13219-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Kadfar Medicamentos LTDA, with a contract value of about R$ 200; signed Oct 15, 2026, in force until Oct 15, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3165": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13230-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Megahosp Comercio de Produtos Para Saude，合同金额约 R$ 278，签约于 2026年10月16日，有效期至 2026年10月16日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13230-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Megahosp Comercio de Produtos Para Saude, with a contract value of about R$ 278; signed Oct 16, 2026, in force until Oct 16, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/88150495000186/2026/1678": {
+  "zh_title": "Esteio（RS）综合服务采购 · 合同已签 #10528/2026",
+  "zh_oneliner": "Esteio（RS）一公共机构已就专业服务或外包服务签订合同，供应商为 Prime Comercio de Artigos Esportivos LTDA，合同金额约 R$ 2,470.72，签约于 2026年11月5日，有效期至 2026年11月5日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Esteio (RS) Services procurement · signed contract #10528/2026",
+  "en_oneliner": "A public buyer in Esteio (RS) has signed a contract for professional or outsourced services, awarded to Prime Comercio de Artigos Esportivos LTDA, with a contract value of about R$ 2,470.72; signed Nov 5, 2026, in force until Nov 5, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3166": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #13321-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Aglon Comércio e Representações LTDA，合同金额约 R$ 19,720.26，签约于 2026年10月19日，有效期至 2026年10月19日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #13321-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Aglon Comércio e Representações LTDA, with a contract value of about R$ 19,720.26; signed Oct 19, 2026, in force until Oct 19, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3167": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #14397-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Drogafonte LTDA，合同金额约 R$ 1,350，签约于 2026年11月12日，有效期至 2026年11月12日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #14397-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Drogafonte LTDA, with a contract value of about R$ 1,350; signed Nov 12, 2026, in force until Nov 12, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3168": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #14425-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Medsi Distribuidora de Medicamentos LTDA，合同金额约 R$ 1,700，签约于 2026年11月12日，有效期至 2026年11月12日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #14425-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Medsi Distribuidora de Medicamentos LTDA, with a contract value of about R$ 1,700; signed Nov 12, 2026, in force until Nov 12, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3169": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #14434-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Kadfar Medicamentos LTDA，合同金额约 R$ 1,000，签约于 2026年11月12日，有效期至 2026年11月12日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #14434-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Kadfar Medicamentos LTDA, with a contract value of about R$ 1,000; signed Nov 12, 2026, in force until Nov 12, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3170": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #14450-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 R.a.p. Aparecida Comércio de Medicamentos LTDA，合同金额约 R$ 190，签约于 2026年11月12日，有效期至 2026年11月12日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #14450-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to R.a.p. Aparecida Comércio de Medicamentos LTDA, with a contract value of about R$ 190; signed Nov 12, 2026, in force until Nov 12, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/46634523000190/2026/3171": {
+  "zh_title": "São Manuel（SP）医疗卫生采购 · 合同已签 #14451-0/2026",
+  "zh_oneliner": "São Manuel（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Megahosp Comercio de Produtos Para Saude，合同金额约 R$ 556，签约于 2026年11月12日，有效期至 2026年11月12日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "São Manuel (SP) Health & medical procurement · signed contract #14451-0/2026",
+  "en_oneliner": "A public buyer in São Manuel (SP) has signed a contract for healthcare goods or services, awarded to Megahosp Comercio de Produtos Para Saude, with a contract value of about R$ 556; signed Nov 12, 2026, in force until Nov 12, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/45302130000117/2026/139": {
+  "zh_title": "Santo Antônio da Alegria（SP）综合服务采购 · 合同已签 #06050",
+  "zh_oneliner": "Santo Antônio da Alegria（SP）一公共机构已就专业服务或外包服务签订合同，供应商为 Aylag Quimica Industrial LTDA，合同金额约 R$ 446.18，签约于 2026年10月1日，有效期至 2026年12月30日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Santo Antônio da Alegria (SP) Services procurement · signed contract #06050",
+  "en_oneliner": "A public buyer in Santo Antônio da Alegria (SP) has signed a contract for professional or outsourced services, awarded to Aylag Quimica Industrial LTDA, with a contract value of about R$ 446.18; signed Oct 1, 2026, in force until Dec 30, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/45132495000140/2026/2233": {
+  "zh_title": "Limeira（SP）物资与设备采购 · 合同已签 #09514",
+  "zh_oneliner": "Limeira（SP）一公共机构已就物资、设备或耗材签订合同，供应商为 Adriana Jorgetti Represent Artisticas LTDA ME，合同金额约 R$ 2,876.28，签约于 2026年10月16日，有效期至 2027年12月31日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Limeira (SP) Supplies & equipment procurement · signed contract #09514",
+  "en_oneliner": "A public buyer in Limeira (SP) has signed a contract for supplies, equipment or consumables, awarded to Adriana Jorgetti Represent Artisticas LTDA ME, with a contract value of about R$ 2,876.28; signed Oct 16, 2026, in force until Dec 31, 2027. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/01165729000180/2026/946": {
+  "zh_title": "Jataí（GO）教育采购 · 合同已签 #416844",
+  "zh_oneliner": "Jataí（GO）一公共机构已就教育方面的物资或服务签订合同，供应商为 Visual Comercio em Geral LTDA，合同金额约 R$ 806.18，签约于 2026年11月23日，有效期至 2026年12月23日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Jataí (GO) Education procurement · signed contract #416844",
+  "en_oneliner": "A public buyer in Jataí (GO) has signed a contract for education-related goods or services, awarded to Visual Comercio em Geral LTDA, with a contract value of about R$ 806.18; signed Nov 23, 2026, in force until Dec 23, 2026. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/51501484000193/2026/15": {
+  "zh_title": "Assis（SP）医疗卫生采购 · 合同已签 #0015/26",
+  "zh_oneliner": "Assis（SP）一公共机构已就医疗卫生方面的物资或服务签订合同，供应商为 Irami Enfermagem LTDA，合同金额约 R$ 387,100，签约于 2026年11月13日，有效期至 2027年11月13日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Assis (SP) Health & medical procurement · signed contract #0015/26",
+  "en_oneliner": "A public buyer in Assis (SP) has signed a contract for healthcare goods or services, awarded to Irami Enfermagem LTDA, with a contract value of about R$ 387,100; signed Nov 13, 2026, in force until Nov 13, 2027. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/contratos/08241747000496/2026/270": {
+  "zh_title": "Natal（RN）物资与设备采购 · 合同已签 #18.020",
+  "zh_oneliner": "Natal（RN）一公共机构已就物资、设备或耗材签订合同，供应商为 Jr Distribuidora LTDA，合同金额约 R$ 95,000，签约于 2026年11月18日，有效期至 2027年11月18日。这是已成交的市场信号，合同全文与履约信息见 PNCP 官方合同页。",
+  "en_title": "Natal (RN) Supplies & equipment procurement · signed contract #18.020",
+  "en_oneliner": "A public buyer in Natal (RN) has signed a contract for supplies, equipment or consumables, awarded to Jr Distribuidora LTDA, with a contract value of about R$ 95,000; signed Nov 18, 2026, in force until Nov 18, 2027. It is a closed deal rather than an open tender; see the official PNCP contract page for the full text and performance details."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/122/17": {
+  "zh_title": "Dois Corregos 信息技术采购 · 价格登记 Ata 217",
+  "zh_oneliner": "Dois Corregos的信息技术设备、系统或服务价格登记（Ata 217）现行有效，有效期至 2027年7月6日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos IT procurement · price registration ata 217",
+  "en_oneliner": "A price registration record (ata 217) for IT equipment, systems or services published by Dois Corregos is currently in force until Jul 6, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/18244368000160/2026/97/1": {
+  "zh_title": "Bom Sucesso 物资与设备采购 · 价格登记 Ata 082",
+  "zh_oneliner": "Bom Sucesso的物资、设备或耗材价格登记（Ata 082）现行有效，有效期至 2027年9月25日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Bom Sucesso Supplies & equipment procurement · price registration ata 082",
+  "en_oneliner": "A price registration record (ata 082) for supplies, equipment or consumables published by Bom Sucesso is currently in force until Sep 25, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/38515573000120/2026/165/2": {
+  "zh_title": "Santana do Paraiso 医疗卫生采购 · 价格登记 Ata 168",
+  "zh_oneliner": "Santana do Paraiso的医疗卫生方面的物资或服务价格登记（Ata 168）现行有效，有效期至 2027年11月17日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Santana do Paraiso Health & medical procurement · price registration ata 168",
+  "en_oneliner": "A price registration record (ata 168) for healthcare goods or services published by Santana do Paraiso is currently in force until Nov 17, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/122/18": {
+  "zh_title": "Dois Corregos 信息技术采购 · 价格登记 Ata 218",
+  "zh_oneliner": "Dois Corregos的信息技术设备、系统或服务价格登记（Ata 218）现行有效，有效期至 2027年7月6日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos IT procurement · price registration ata 218",
+  "en_oneliner": "A price registration record (ata 218) for IT equipment, systems or services published by Dois Corregos is currently in force until Jul 6, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/27165638000139/2026/212/1": {
+  "zh_title": "Castelo 物资与设备采购 · 价格登记 Ata 000426",
+  "zh_oneliner": "Castelo的物资、设备或耗材价格登记（Ata 000426）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Castelo Supplies & equipment procurement · price registration ata 000426",
+  "en_oneliner": "A price registration record (ata 000426) for supplies, equipment or consumables published by Castelo is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/27165638000139/2026/212/2": {
+  "zh_title": "Castelo 物资与设备采购 · 价格登记 Ata 000425",
+  "zh_oneliner": "Castelo的物资、设备或耗材价格登记（Ata 000425）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Castelo Supplies & equipment procurement · price registration ata 000425",
+  "en_oneliner": "A price registration record (ata 000425) for supplies, equipment or consumables published by Castelo is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/122/19": {
+  "zh_title": "Dois Corregos 信息技术采购 · 价格登记 Ata 219",
+  "zh_oneliner": "Dois Corregos的信息技术设备、系统或服务价格登记（Ata 219）现行有效，有效期至 2027年7月6日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos IT procurement · price registration ata 219",
+  "en_oneliner": "A price registration record (ata 219) for IT equipment, systems or services published by Dois Corregos is currently in force until Jul 6, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/18243220000101/2026/110/4": {
+  "zh_title": "Alfenas 交通与车辆采购 · 价格登记 Ata 208",
+  "zh_oneliner": "Alfenas的车辆、运输或相关设备与服务价格登记（Ata 208）现行有效，有效期至 2027年10月28日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Alfenas Transport & vehicles procurement · price registration ata 208",
+  "en_oneliner": "A price registration record (ata 208) for vehicles, transport or related equipment and services published by Alfenas is currently in force until Oct 28, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/122/20": {
+  "zh_title": "Dois Corregos 信息技术采购 · 价格登记 Ata 220",
+  "zh_oneliner": "Dois Corregos的信息技术设备、系统或服务价格登记（Ata 220）现行有效，有效期至 2027年7月6日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos IT procurement · price registration ata 220",
+  "en_oneliner": "A price registration record (ata 220) for IT equipment, systems or services published by Dois Corregos is currently in force until Jul 6, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/46634523000190/2026/342/1": {
+  "zh_title": "Sao Manuel 综合服务采购 · 价格登记 Ata 2673",
+  "zh_oneliner": "Sao Manuel的专业服务或外包服务价格登记（Ata 2673）现行有效，有效期至 2027年7月14日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Sao Manuel Services procurement · price registration ata 2673",
+  "en_oneliner": "A price registration record (ata 2673) for professional or outsourced services published by Sao Manuel is currently in force until Jul 14, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/76977768000181/2026/192/1": {
+  "zh_title": "Paranavai 医疗卫生采购 · 价格登记 Ata 197",
+  "zh_oneliner": "Paranavai的医疗卫生方面的物资或服务价格登记（Ata 197）现行有效，有效期至 2027年11月12日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Paranavai Health & medical procurement · price registration ata 197",
+  "en_oneliner": "A price registration record (ata 197) for healthcare goods or services published by Paranavai is currently in force until Nov 12, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/75771477000170/2026/212/3": {
+  "zh_title": "Londrina 医疗卫生采购 · 价格登记 Ata 43926",
+  "zh_oneliner": "Londrina的医疗卫生方面的物资或服务价格登记（Ata 43926）现行有效，有效期至 2028年1月22日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Londrina Health & medical procurement · price registration ata 43926",
+  "en_oneliner": "A price registration record (ata 43926) for healthcare goods or services published by Londrina is currently in force until Jan 22, 2028. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/12053489000149/2026/212/7": {
+  "zh_title": "Fundo Municipal de Saude 医疗卫生采购 · 价格登记 Ata 108",
+  "zh_oneliner": "该机构的医疗卫生方面的物资或服务价格登记（Ata 108）现行有效，有效期至 2027年11月11日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Fundo Municipal de Saude Health & medical procurement · price registration ata 108",
+  "en_oneliner": "A price registration record (ata 108) for healthcare goods or services published by the responsible body is currently in force until Nov 11, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/13393178000191/2025/16/2": {
+  "zh_title": "Heliopolis 教育采购 · 价格登记 Ata 016/2025",
+  "zh_oneliner": "Heliopolis的教育方面的物资或服务价格登记（Ata 016/2025）现行有效，有效期至 2027年3月24日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Heliopolis Education procurement · price registration ata 016/2025",
+  "en_oneliner": "A price registration record (ata 016/2025) for education-related goods or services published by Heliopolis is currently in force until Mar 24, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/12053489000149/2026/212/8": {
+  "zh_title": "Fundo Municipal de Saude 医疗卫生采购 · 价格登记 Ata 113",
+  "zh_oneliner": "该机构的医疗卫生方面的物资或服务价格登记（Ata 113）现行有效，有效期至 2027年11月11日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Fundo Municipal de Saude Health & medical procurement · price registration ata 113",
+  "en_oneliner": "A price registration record (ata 113) for healthcare goods or services published by the responsible body is currently in force until Nov 11, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/01612626000111/2026/5/1": {
+  "zh_title": "Serrano do Maranhao 食品与餐饮采购 · 价格登记 Ata 004",
+  "zh_oneliner": "Serrano do Maranhao的食品、餐饮或相关物资价格登记（Ata 004）现行有效，有效期至 2027年2月27日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Serrano do Maranhao Food & catering procurement · price registration ata 004",
+  "en_oneliner": "A price registration record (ata 004) for food, catering or related supplies published by Serrano do Maranhao is currently in force until Feb 27, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/02879138000138/2025/170/1": {
+  "zh_title": "Jandaia 工程与基建采购 · 价格登记 Ata 18",
+  "zh_oneliner": "Jandaia的工程、维修或基础设施方面的服务或物资价格登记（Ata 18）现行有效，有效期至 2026年11月25日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Jandaia Works & infrastructure procurement · price registration ata 18",
+  "en_oneliner": "A price registration record (ata 18) for works, repairs or infrastructure services published by Jandaia is currently in force until Nov 25, 2026. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/46634523000190/2026/343/1": {
+  "zh_title": "Sao Manuel 交通与车辆采购 · 价格登记 Ata 2674",
+  "zh_oneliner": "Sao Manuel的车辆、运输或相关设备与服务价格登记（Ata 2674）现行有效，有效期至 2027年7月14日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Sao Manuel Transport & vehicles procurement · price registration ata 2674",
+  "en_oneliner": "A price registration record (ata 2674) for vehicles, transport or related equipment and services published by Sao Manuel is currently in force until Jul 14, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/14896759000109/2026/27/1": {
+  "zh_title": "Consorcio Intermunicipal da Rede de Urgencias do Sudoeste do Parana 医疗卫生采购 · 价格登记 Ata 92",
+  "zh_oneliner": "该机构的医疗卫生方面的物资或服务价格登记（Ata 92）现行有效，有效期至 2027年11月19日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Consorcio Intermunicipal da Rede de Urgencias do Sudoeste do Parana Health & medical procurement · price registration ata 92",
+  "en_oneliner": "A price registration record (ata 92) for healthcare goods or services published by the responsible body is currently in force until Nov 19, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/14896759000109/2026/27/2": {
+  "zh_title": "Consorcio Intermunicipal da Rede de Urgencias do Sudoeste do Parana 医疗卫生采购 · 价格登记 Ata 93",
+  "zh_oneliner": "该机构的医疗卫生方面的物资或服务价格登记（Ata 93）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Consorcio Intermunicipal da Rede de Urgencias do Sudoeste do Parana Health & medical procurement · price registration ata 93",
+  "en_oneliner": "A price registration record (ata 93) for healthcare goods or services published by the responsible body is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/18192252000125/2026/56/1": {
+  "zh_title": "Santa Rosa da Serra 医疗卫生采购 · 价格登记 Ata 079",
+  "zh_oneliner": "Santa Rosa da Serra的医疗卫生方面的物资或服务价格登记（Ata 079）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Santa Rosa da Serra Health & medical procurement · price registration ata 079",
+  "en_oneliner": "A price registration record (ata 079) for healthcare goods or services published by Santa Rosa da Serra is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/27165554000103/2026/355/1": {
+  "zh_title": "Vila Velha 医疗卫生采购 · 价格登记 Ata 189",
+  "zh_oneliner": "Vila Velha的医疗卫生方面的物资或服务价格登记（Ata 189）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Vila Velha Health & medical procurement · price registration ata 189",
+  "en_oneliner": "A price registration record (ata 189) for healthcare goods or services published by Vila Velha is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/27165554000103/2026/355/2": {
+  "zh_title": "Vila Velha 医疗卫生采购 · 价格登记 Ata 188",
+  "zh_oneliner": "Vila Velha的医疗卫生方面的物资或服务价格登记（Ata 188）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Vila Velha Health & medical procurement · price registration ata 188",
+  "en_oneliner": "A price registration record (ata 188) for healthcare goods or services published by Vila Velha is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/27165554000103/2026/355/3": {
+  "zh_title": "Vila Velha 医疗卫生采购 · 价格登记 Ata 187",
+  "zh_oneliner": "Vila Velha的医疗卫生方面的物资或服务价格登记（Ata 187）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Vila Velha Health & medical procurement · price registration ata 187",
+  "en_oneliner": "A price registration record (ata 187) for healthcare goods or services published by Vila Velha is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/27165554000103/2026/355/4": {
+  "zh_title": "Vila Velha 医疗卫生采购 · 价格登记 Ata 186",
+  "zh_oneliner": "Vila Velha的医疗卫生方面的物资或服务价格登记（Ata 186）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Vila Velha Health & medical procurement · price registration ata 186",
+  "en_oneliner": "A price registration record (ata 186) for healthcare goods or services published by Vila Velha is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/139/1": {
+  "zh_title": "Dois Corregos 工程与基建采购 · 价格登记 Ata 221",
+  "zh_oneliner": "Dois Corregos的工程、维修或基础设施方面的服务或物资价格登记（Ata 221）现行有效，有效期至 2027年7月13日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos Works & infrastructure procurement · price registration ata 221",
+  "en_oneliner": "A price registration record (ata 221) for works, repairs or infrastructure services published by Dois Corregos is currently in force until Jul 13, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/04215918000109/2026/265/1": {
+  "zh_title": "Lagoa Bonita do Sul 物资与设备采购 · 价格登记 Ata 45",
+  "zh_oneliner": "Lagoa Bonita do Sul的物资、设备或耗材价格登记（Ata 45）现行有效，有效期至 2027年11月19日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Lagoa Bonita do Sul Supplies & equipment procurement · price registration ata 45",
+  "en_oneliner": "A price registration record (ata 45) for supplies, equipment or consumables published by Lagoa Bonita do Sul is currently in force until Nov 19, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/139/2": {
+  "zh_title": "Dois Corregos 工程与基建采购 · 价格登记 Ata 222",
+  "zh_oneliner": "Dois Corregos的工程、维修或基础设施方面的服务或物资价格登记（Ata 222）现行有效，有效期至 2027年7月13日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos Works & infrastructure procurement · price registration ata 222",
+  "en_oneliner": "A price registration record (ata 222) for works, repairs or infrastructure services published by Dois Corregos is currently in force until Jul 13, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45302130000117/2026/34/14": {
+  "zh_title": "Santo Antonio da Alegria 医疗卫生采购 · 价格登记 Ata 000222",
+  "zh_oneliner": "Santo Antonio da Alegria的医疗卫生方面的物资或服务价格登记（Ata 000222）现行有效，有效期至 2027年4月9日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Santo Antonio da Alegria Health & medical procurement · price registration ata 000222",
+  "en_oneliner": "A price registration record (ata 000222) for healthcare goods or services published by Santo Antonio da Alegria is currently in force until Apr 9, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45302130000117/2026/34/15": {
+  "zh_title": "Santo Antonio da Alegria 医疗卫生采购 · 价格登记 Ata 000224",
+  "zh_oneliner": "Santo Antonio da Alegria的医疗卫生方面的物资或服务价格登记（Ata 000224）现行有效，有效期至 2027年4月9日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Santo Antonio da Alegria Health & medical procurement · price registration ata 000224",
+  "en_oneliner": "A price registration record (ata 000224) for healthcare goods or services published by Santo Antonio da Alegria is currently in force until Apr 9, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45302130000117/2026/34/16": {
+  "zh_title": "Santo Antonio da Alegria 医疗卫生采购 · 价格登记 Ata 000225",
+  "zh_oneliner": "Santo Antonio da Alegria的医疗卫生方面的物资或服务价格登记（Ata 000225）现行有效，有效期至 2027年4月9日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Santo Antonio da Alegria Health & medical procurement · price registration ata 000225",
+  "en_oneliner": "A price registration record (ata 000225) for healthcare goods or services published by Santo Antonio da Alegria is currently in force until Apr 9, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45302130000117/2026/34/17": {
+  "zh_title": "Santo Antonio da Alegria 医疗卫生采购 · 价格登记 Ata 000228",
+  "zh_oneliner": "Santo Antonio da Alegria的医疗卫生方面的物资或服务价格登记（Ata 000228）现行有效，有效期至 2027年4月9日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Santo Antonio da Alegria Health & medical procurement · price registration ata 000228",
+  "en_oneliner": "A price registration record (ata 000228) for healthcare goods or services published by Santo Antonio da Alegria is currently in force until Apr 9, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/35747598000161/2025/63/12": {
+  "zh_title": "Melhoria da Pericia Oficial - Fumpof 医疗卫生采购 · 价格登记 Ata 0088/PCI - K",
+  "zh_oneliner": "Melhoria da Pericia Oficial - Fumpof的医疗卫生方面的物资或服务价格登记（Ata 0088/PCI - K）现行有效，有效期至 2027年11月17日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Melhoria da Pericia Oficial - Fumpof Health & medical procurement · price registration ata 0088/PCI - K",
+  "en_oneliner": "A price registration record (ata 0088/PCI - K) for healthcare goods or services published by Melhoria da Pericia Oficial - Fumpof is currently in force until Nov 17, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/118/1": {
+  "zh_title": "Dois Corregos 食品与餐饮采购 · 价格登记 Ata 223",
+  "zh_oneliner": "Dois Corregos的食品、餐饮或相关物资价格登记（Ata 223）现行有效，有效期至 2027年7月16日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos Food & catering procurement · price registration ata 223",
+  "en_oneliner": "A price registration record (ata 223) for food, catering or related supplies published by Dois Corregos is currently in force until Jul 16, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/29114121000146/2026/53/1": {
+  "zh_title": "Miracema 食品与餐饮采购 · 价格登记 Ata 061/2026",
+  "zh_oneliner": "Miracema的食品、餐饮或相关物资价格登记（Ata 061/2026）现行有效，有效期至 2027年11月23日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Miracema Food & catering procurement · price registration ata 061/2026",
+  "en_oneliner": "A price registration record (ata 061/2026) for food, catering or related supplies published by Miracema is currently in force until Nov 23, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/118/2": {
+  "zh_title": "Dois Corregos 食品与餐饮采购 · 价格登记 Ata 224",
+  "zh_oneliner": "Dois Corregos的食品、餐饮或相关物资价格登记（Ata 224）现行有效，有效期至 2027年7月16日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos Food & catering procurement · price registration ata 224",
+  "en_oneliner": "A price registration record (ata 224) for food, catering or related supplies published by Dois Corregos is currently in force until Jul 16, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/46634523000190/2026/344/1": {
+  "zh_title": "Sao Manuel 医疗卫生采购 · 价格登记 Ata 2675",
+  "zh_oneliner": "Sao Manuel的医疗卫生方面的物资或服务价格登记（Ata 2675）现行有效，有效期至 2027年7月24日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Sao Manuel Health & medical procurement · price registration ata 2675",
+  "en_oneliner": "A price registration record (ata 2675) for healthcare goods or services published by Sao Manuel is currently in force until Jul 24, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/80880107000100/2026/109/3": {
+  "zh_title": "Ouro Verde do Oeste 物资与设备采购 · 价格登记 Ata 206",
+  "zh_oneliner": "Ouro Verde do Oeste的物资、设备或耗材价格登记（Ata 206）现行有效，有效期至 2027年11月19日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Ouro Verde do Oeste Supplies & equipment procurement · price registration ata 206",
+  "en_oneliner": "A price registration record (ata 206) for supplies, equipment or consumables published by Ouro Verde do Oeste is currently in force until Nov 19, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/45671120000159/2026/118/3": {
+  "zh_title": "Dois Corregos 食品与餐饮采购 · 价格登记 Ata 225",
+  "zh_oneliner": "Dois Corregos的食品、餐饮或相关物资价格登记（Ata 225）现行有效，有效期至 2027年7月16日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Dois Corregos Food & catering procurement · price registration ata 225",
+  "en_oneliner": "A price registration record (ata 225) for food, catering or related supplies published by Dois Corregos is currently in force until Jul 16, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
+ },
+ "https://pncp.gov.br/app/atas/80880107000100/2026/109/4": {
+  "zh_title": "Ouro Verde do Oeste 物资与设备采购 · 价格登记 Ata 207",
+  "zh_oneliner": "Ouro Verde do Oeste的物资、设备或耗材价格登记（Ata 207）现行有效，有效期至 2027年11月19日。中小企业可到 PNCP 官方页面查看登记价格与供应商，并了解参与（adesão）方式。",
+  "en_title": "Ouro Verde do Oeste Supplies & equipment procurement · price registration ata 207",
+  "en_oneliner": "A price registration record (ata 207) for supplies, equipment or consumables published by Ouro Verde do Oeste is currently in force until Nov 19, 2027. SMEs can check the registered prices and suppliers on the official PNCP page and see how to join (adesão)."
  }
 }
