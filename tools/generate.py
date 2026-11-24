@@ -4236,6 +4236,19 @@ def main():
     live.sort(key=lambda x: x["score"], reverse=True)
     live = maybe_llm_rerank(live, site)
 
+    # 详情页保留集（Cloudflare Pages 单次部署上限 2 万文件）：只保留最新
+    # detail_keep_items 条（按发布时间倒序）；其余条目仍留在 store、列表与
+    # 日报里，但不再生成详情页，旧详情页每轮清理。2026-11-24 实测：不设上限
+    # 时工作日每天新增约 3,800 个文件，单次删减到 1.9 万以下只能撑约半天。
+    _keep_n = int(sc.get("detail_keep_items") or 0)
+    if _keep_n > 0 and len(history) > _keep_n:
+        _by_pub = sorted(history.values(),
+                         key=lambda x: (x.get("published") or "0000", x["id"]),
+                         reverse=True)
+        detail_keep_ids = {it["id"] for it in _by_pub[:_keep_n]}
+    else:
+        detail_keep_ids = set(history.keys())
+
     recent_48h = [it for it in live if (now - it["_pub"]) <= timedelta(hours=sc["selected_hours"])]
     selected = [it for it in recent_48h if it["score"] >= sc["selected_min"]]
     selected.sort(key=lambda x: x["score"], reverse=True)
@@ -4552,7 +4565,8 @@ def main():
     for _it_id, _it in history.items():
         _pub_dates.setdefault(_it_id, (_it.get("published") or "")[:10] or today_iso)
     for _it_id in list(history.keys()) + [_it["id"] for _it in live]:
-        _add_sitemap("items/" + _it_id + ".html", _pub_dates.get(_it_id, today_iso))
+        if _it_id in detail_keep_ids:
+            _add_sitemap("items/" + _it_id + ".html", _pub_dates.get(_it_id, today_iso))
     for _sub in ("daily", "weekly", "monthly"):
         _sub_dir = os.path.join(root, _sub)
         if os.path.isdir(_sub_dir):
@@ -4563,7 +4577,7 @@ def main():
     _items_dir = os.path.join(root, "items")
     if os.path.isdir(_items_dir):
         for _fn in sorted(os.listdir(_items_dir)):
-            if _fn.endswith(".html"):
+            if _fn.endswith(".html") and _fn[:-5] in detail_keep_ids:
                 _add_sitemap("items/" + _fn, _pub_dates.get(_fn[:-5], today_iso))
     # 英文树 sitemap：中文条目之后追加，顺序与中文一致；英文首页以 en/ 入站
     for _p in ["en/", "en/all.html", "en/hot.html", "en/daily.html", "en/weekly.html",
@@ -4575,7 +4589,8 @@ def main():
     for _l, slug, _n in tag_counts_en:
         _add_sitemap("en/topics/" + slug + ".html", today_iso)
     for _it_id in list(history.keys()) + [_it["id"] for _it in live]:
-        _add_sitemap("en/items/" + _it_id + ".html", _pub_dates.get(_it_id, today_iso))
+        if _it_id in detail_keep_ids:
+            _add_sitemap("en/items/" + _it_id + ".html", _pub_dates.get(_it_id, today_iso))
     for _sub in ("daily", "weekly", "monthly"):
         _sub_dir = os.path.join(en_root, _sub)
         if os.path.isdir(_sub_dir):
@@ -4586,7 +4601,7 @@ def main():
     _en_items_dir = os.path.join(en_root, "items")
     if os.path.isdir(_en_items_dir):
         for _fn in sorted(os.listdir(_en_items_dir)):
-            if _fn.endswith(".html"):
+            if _fn.endswith(".html") and _fn[:-5] in detail_keep_ids:
                 _add_sitemap("en/items/" + _fn, _pub_dates.get(_fn[:-5], today_iso))
     sm = ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
           "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"]
@@ -4923,9 +4938,13 @@ def main():
         lst.sort(key=_pub_key, reverse=True)
     n_items = 0
     for it in live:
+        if it["id"] not in detail_keep_ids:
+            continue
         my_pub = it.get("published") or "0000"
         picked = []
         for cand in by_cat.get(it["category"], []):
+            if cand["id"] not in detail_keep_ids:
+                continue
             if cand["id"] == it["id"] or cand in picked:
                 continue
             if (cand.get("published") or "0000") > my_pub:
@@ -4935,6 +4954,8 @@ def main():
                 break
         if len(picked) < 5:
             for cand in by_src.get(it["source_id"], []):
+                if cand["id"] not in detail_keep_ids:
+                    continue
                 if cand["id"] == it["id"] or cand in picked:
                     continue
                 if (cand.get("published") or "0000") > my_pub:
@@ -4954,6 +4975,15 @@ def main():
                                 it["id"] in sel_ids,
                                 daily_issue_en.get(it["id"]), lang="en"))
         n_items += 1
+    # 清理超出保留集的旧详情页（中英两树），否则文件数每轮反弹
+    _pruned = 0
+    for _d in (items_dir, en_items_dir):
+        for _fn in os.listdir(_d):
+            if _fn.endswith(".html") and _fn[:-5] not in detail_keep_ids:
+                os.remove(os.path.join(_d, _fn))
+                _pruned += 1
+    if _pruned:
+        print(f"prune: removed {_pruned} stale detail pages")
     print(f"items: {n_items} detail pages (x2 trees)")
     print(f"en: {len(tag_counts_en)} topics, {len(en_day_index)} day files")
     # --- /geo-audit 自检页 + 数据（SEO/GEO：每轮生成后自检，日报复用同一份数据）---

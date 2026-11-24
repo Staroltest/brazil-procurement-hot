@@ -250,6 +250,7 @@
     "base": 50,
     "daily_hours": 48,
     "daily_top": 10,
+    "detail_keep_items": 9000,
     "decay_base": 0.8,
     "dev_keyword_bonus": 5,
     "dev_keyword_cap": 25,
