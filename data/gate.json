@@ -1,0 +1,15 @@
+{
+ "updated_at": "2026-11-25T12:42:39.487767+00:00",
+ "store_size_by_date": {
+  "2026-11-25": 14094
+ },
+ "gate": {
+  "date": "2026-11-25",
+  "files_total": 18378,
+  "keep_default": 9000,
+  "keep_applied": 9000,
+  "trigger": null,
+  "yesterday_new": null,
+  "store_size": 14094
+ }
+}

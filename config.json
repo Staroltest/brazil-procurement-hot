@@ -251,6 +251,14 @@
     "daily_hours": 48,
     "daily_top": 10,
     "detail_keep_items": 9000,
+    "detail_gate": {
+      "files_high": 19000,
+      "files_high_keep": 8500,
+      "files_critical": 19500,
+      "files_critical_keep": 8000,
+      "daily_new_max": 3000,
+      "daily_new_keep": 8500
+    },
     "decay_base": 0.8,
     "dev_keyword_bonus": 5,
     "dev_keyword_cap": 25,
