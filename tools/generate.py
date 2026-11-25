@@ -4236,11 +4236,62 @@ def main():
     live.sort(key=lambda x: x["score"], reverse=True)
     live = maybe_llm_rerank(live, site)
 
+    # 每日守门（2026-11-25 老板定：继续方案 B，删减机制常态化）：
+    # 部署口径文件数（整站文件减 data/store.json）超 files_high 收紧到
+    # files_high_keep、超 files_critical 收紧到 files_critical_keep；
+    # 昨日新增入库条数超 daily_new_max，次日自动降到 daily_new_keep。
+    # 未触发时用 detail_keep_items。守门状态写 data/gate.json 与
+    # data/hot.json 的 gate 字段，供每日同步带上文件数与触发情况。
+    _gate_cfg = sc.get("detail_gate") or {}
+    _keep_default = int(sc.get("detail_keep_items") or 0)
+    _files_total = 0
+    for _dp, _dn, _fn in os.walk(root):
+        _files_total += len(_fn)
+    if os.path.exists(hist_path):
+        _files_total -= 1  # data/store.json 不部署，不计入
+    _today_str = now_cst.strftime("%Y-%m-%d")
+    _yday_str = (now_cst - timedelta(days=1)).strftime("%Y-%m-%d")
+    _prev_str = (now_cst - timedelta(days=2)).strftime("%Y-%m-%d")
+    _gate_path = os.path.join(data_dir, "gate.json")
+    _sizes = {}
+    if os.path.exists(_gate_path):
+        try:
+            _sizes = load_json(_gate_path).get("store_size_by_date", {}) or {}
+        except (json.JSONDecodeError, KeyError, AttributeError):
+            _sizes = {}
+    _sizes[_today_str] = len(history)
+    _sizes = {d: n for d, n in _sizes.items() if d >= _prev_str}
+    _yday_new = None
+    if _yday_str in _sizes and _prev_str in _sizes:
+        _yday_new = _sizes[_yday_str] - _sizes[_prev_str]
+    _keep_n = _keep_default
+    _trigger = None
+    _gh = _gate_cfg.get("files_high")
+    _gc = _gate_cfg.get("files_critical")
+    _dn_max = _gate_cfg.get("daily_new_max")
+    if _gc is not None and _files_total > int(_gc):
+        _keep_n = int(_gate_cfg.get("files_critical_keep") or _keep_default)
+        _trigger = f"files>{_gc}"
+    elif _gh is not None and _files_total > int(_gh):
+        _keep_n = int(_gate_cfg.get("files_high_keep") or _keep_default)
+        _trigger = f"files>{_gh}"
+    elif (_yday_new is not None and _dn_max is not None
+            and _yday_new > int(_dn_max)):
+        _keep_n = int(_gate_cfg.get("daily_new_keep") or _keep_default)
+        _trigger = f"yesterday_new>{_dn_max}"
+    gate = {"date": _today_str, "files_total": _files_total,
+            "keep_default": _keep_default, "keep_applied": _keep_n,
+            "trigger": _trigger, "yesterday_new": _yday_new,
+            "store_size": len(history)}
+    save_json(_gate_path, {"updated_at": now.isoformat(),
+                           "store_size_by_date": _sizes, "gate": gate})
+    print(f"gate: files={_files_total} keep={_keep_n} "
+          f"trigger={_trigger} yesterday_new={_yday_new}")
+
     # 详情页保留集（Cloudflare Pages 单次部署上限 2 万文件）：只保留最新
     # detail_keep_items 条（按发布时间倒序）；其余条目仍留在 store、列表与
     # 日报里，但不再生成详情页，旧详情页每轮清理。2026-11-24 实测：不设上限
     # 时工作日每天新增约 3,800 个文件，单次删减到 1.9 万以下只能撑约半天。
-    _keep_n = int(sc.get("detail_keep_items") or 0)
     if _keep_n > 0 and len(history) > _keep_n:
         _by_pub = sorted(history.values(),
                          key=lambda x: (x.get("published") or "0000", x["id"]),
@@ -4327,6 +4378,7 @@ def main():
         "generated_at_cst": gen_cst,
         "counts": {"total_7d": len(last_7d), "selected": len(selected),
                    "hot": len(hot), "timeline": len(timeline)},
+        "gate": gate,
         "hot": [pub_item(it) for it in hot],
     }
     save_json(os.path.join(data_dir, "hot.json"), hot_data, compact=True)
@@ -4338,6 +4390,7 @@ def main():
         "generated_at": now.isoformat(),
         "generated_at_cst": gen_cst_en,
         "counts": hot_data["counts"],
+        "gate": gate,
         "hot": [pub_item_en(it) for it in hot],
     }
     save_json(os.path.join(en_data_dir, "hot.json"), hot_data_en, compact=True)
