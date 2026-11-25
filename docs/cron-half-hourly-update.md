@@ -16,7 +16,7 @@
 
 每轮按顺序做：
 
-1. 同步草稿（防并行写丢数据）：用 `python3 ~/workspace/custom-connectors/custom.github-token/bin/api.py GET /repos/Staroltest/brazil-procurement-hot/contents/data/zh_draft.json` 拉远端 data/zh_draft.json，与本地字段级合并（按链接取并集；同字段冲突保留本地；en_title/en_oneliner 永不丢），写回本地（indent=1，ensure_ascii=False）。拉不到就跳过这步、用本地继续，不要停。
+1. 同步草稿（防并行写丢数据）：跑 `python3 ~/workspace/goals/hot/hidden_files/sync_draft.py`——它拉远端 data/zh_draft.json、按链接取并集做字段级合并（同字段冲突保留本地；en_title/en_oneliner 永不丢），写回前断言合并后条数不小于本地原条数、本地须为字典结构，否则拒绝写回。不要现写一次性合并脚本（2026-11-25 有一轮现写脚本把字典当列表处理、把草稿覆写成空列表，虽已从远端副本恢复、无数据丢失，但不可再犯）。拉不到远端或 helper 失败就跳过这步、用本地继续，不要停。
 2. 拉源 + 生成：先跑 `python3 tools/pncp_fetch.py`（退出码 3 = 一条都没拉到，停下来向主聊汇报；个别方式/页失败可容忍，日志里有数就行），再跑 `python3 tools/generate.py`；如果本轮是北京时间 06:00–06:59 窗口内的第一轮，generate 加 `--daily` 出当日日报。
 3. 抽查改写质量：从本轮新条目里抽 3 条，看 data/zh_draft.json 里的 zh_title/zh_oneliner/en_title/en_oneliner 是否通顺、金额格式是否为 R$ 1,234.56 国际格式、截止时间是否带「巴西利亚时间」标注；发现明显错误就字段级修正该条目后重新 generate。发现任何公开文件里出现 objetoCompra 原文片段，停下来向主聊汇报，不要推送。
 4. 自查：data/hot.json 的 counts 里 selected ≥ 1、hot ≥ 1、timeline ≥ 1（全为 0 是异常，汇报）；扫描 en/ 全树不得出现中文字符（CJK），en/data/hot.json 里 0 个 zh_* 键、data/hot.json 里 0 个 en_* 键；data/geo-audit.json 的 failed 必须为 0（mcp/mirror 两项 warn 是常态，不算问题）；中英各抽一页有 hreflang 三元组。
