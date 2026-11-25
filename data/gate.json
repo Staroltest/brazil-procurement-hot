@@ -1,7 +1,7 @@
 {
- "updated_at": "2026-11-25T13:37:36.568760+00:00",
+ "updated_at": "2026-11-25T15:29:31.782978+00:00",
  "store_size_by_date": {
-  "2026-11-25": 14095
+  "2026-11-25": 14096
  },
  "gate": {
   "date": "2026-11-25",
@@ -10,6 +10,6 @@
   "keep_applied": 9000,
   "trigger": null,
   "yesterday_new": null,
-  "store_size": 14095
+  "store_size": 14096
  }
 }
