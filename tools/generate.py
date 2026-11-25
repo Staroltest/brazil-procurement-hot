@@ -2602,13 +2602,17 @@ def _same_topic(a, b):
     return na.startswith(nb) or nb.startswith(na)
 
 
-def dedup_topics(items):
-    """按顺序去重同事件条目，保留先出现的（调用前已按分数排好序）。"""
+def dedup_topics(items, limit=None):
+    """按顺序去重同事件条目，保留先出现的（调用前已按分数排好序）。
+    limit 不为空时凑够 limit 条即停：所有调用方都只取前 N 条，
+    继续扫描既不会改变前 N 条结果，只会白白做平方比较。"""
     kept = []
     for it in items:
         if any(_same_topic(it, k) for k in kept):
             continue
         kept.append(it)
+        if limit is not None and len(kept) >= limit:
+            break
     return kept
 
 
@@ -4303,13 +4307,13 @@ def main():
     recent_48h = [it for it in live if (now - it["_pub"]) <= timedelta(hours=sc["selected_hours"])]
     selected = [it for it in recent_48h if it["score"] >= sc["selected_min"]]
     selected.sort(key=lambda x: x["score"], reverse=True)
-    selected = dedup_topics(selected)[:sc["daily_top"]]
+    selected = dedup_topics(selected, sc["daily_top"])
 
     last_7d = [it for it in live if (now - it["_pub"]) <= timedelta(days=sc["hot_days"])]
     for it in last_7d:
         age_days = (now - it["_pub"]).total_seconds() / 86400.0
         it["hot_score"] = round(it["score"] * (sc["decay_base"] ** age_days), 1)
-    hot = dedup_topics(sorted(last_7d, key=lambda x: x["hot_score"], reverse=True))[:sc["hot_top"]]
+    hot = dedup_topics(sorted(last_7d, key=lambda x: x["hot_score"], reverse=True), sc["hot_top"])
     timeline = sorted(last_7d, key=lambda x: x["_pub"], reverse=True)[:sc["timeline_max"]]
 
     # 趋势：对照上一轮已发布的榜单名次与热度（读旧 data/hot.json，写新文件之前）
@@ -4680,7 +4684,7 @@ def main():
     if args.daily:
         def build_period(kind, pool, window_label):
             pool_sorted = sorted(pool, key=lambda x: x["score"], reverse=True)
-            items = dedup_topics(pool_sorted)[:sc["daily_top"]]
+            items = dedup_topics(pool_sorted, sc["daily_top"])
             per_cat = {}
             for it in items:
                 per_cat[it["category_label"]] = per_cat.get(it["category_label"], 0) + 1
@@ -4713,7 +4717,7 @@ def main():
             """build_period 的英文版：同一批条目，英文日期/导读/条目数据。
             导读含本轮池子规模（仅新报告有该数据）。"""
             pool_sorted = sorted(pool, key=lambda x: x["score"], reverse=True)
-            items = dedup_topics(pool_sorted)[:sc["daily_top"]]
+            items = dedup_topics(pool_sorted, sc["daily_top"])
             per_cat = {}
             for it in items:
                 lab = it.get("category_label_en") or it["category"]
